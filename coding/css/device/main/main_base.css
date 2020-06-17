@@ -1,20 +1,5 @@
 /* main_base.css */
 
-/* color
-* base
-    #060C08
-    #333
-    #666
-    #ddd
-    #fdfdfd
-* primary
-    #f93
-    #f39208
-    #ff6600
-    #573a00
-    #573a00
-*/
-
 /* 1024px base */
 #wrap{
   width: 100%; height: 100%;
@@ -22,40 +7,84 @@
 
 /* #viewBox ====================================================== */
 #viewBox{
-  width: 100%; height: 540px;
-  background-color: #666;
-
+  position: relative;
+  width: 100%; height: 600px;
 }
+/* slide_btn */
+.slide_btn{position: absolute; top: 50%; left: 0; right: 0; width:96%; height:0; margin: auto; background-color: #f93; margin-top: -55px;}
+.slide_btn button{float:left; width: 30px; height: 50px; background-color: #fdfdfd;}
+.slide_btn .next{float: right;}
 
-/* .slide_btn{} */
-/* .indicator{} */
-/* .indicator_title{} */
-/* .view_film_wrap{} */
-/* .view_film{} */
+/* indicator */
+.indicator{position:absolute; left:0; bottom:0; width: 100%; height: 60px; background-color: #060C08; overflow: hidden;}
+.indi_title{width: 250%; height: 100%;}
+.indi_title li{float:left; width: 12.5%; height: 100%; text-align: center; color: #ddd; text-transform: uppercase; line-height: 60px; font-size: 1.2rem;}
+.indi_title li.active{font-weight: bold;}
+
+/* 화면 전체 이미지 */
+.view_film{
+  position: absolute; top: 0; left: 0; z-index: -1;
+  width: 100%; height: 100%; 
+  overflow: hidden;
+}
+.view_film_wrap{width: 800%; height: 100%; }
+.view_film li{float:left; width: 12.5%; height: 100%;}
+.mv_01{background-color: #aaa;}
+.mv_02{background-color: #999;}
+.mv_03{background-color: #888;}
+.mv_04{background-color: #777;}
+.mv_05{background-color: #666;}
+.mv_06{background-color: #555;}
+.mv_07{background-color: #444;}
+.mv_08{background-color: #333;}
+
+.viewBanner_content{position:absolute; left:10%; bottom:100px; width: 50%; height: 30%;}
+.viewBanner_bg{width: 100%; height: auto;}
+.viewBanner_bg ul{position:relative; width: 100%; height: auto;}
+.viewBanner_bg li{
+  position: absolute; top: 0; left: 0; z-index: 0; 
+  width: 100%; height: auto;
+  display: none;
+}
+.viewBanner_bg li:active{
+	z-index: 10;
+}
 /* // #viewBox ==================================================== */
 
 /* #filmBox ====================================================== */
 #filmBox{
   width: 100%; height: auto; min-height: 990px;
   background-color: #fdfdfd;
-
+  padding: 5rem 1rem; box-sizing: border-box;
 }
+h3{width: 100%; height: 60px; font-size: 2rem; text-transform: uppercase;}
+h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; background-color:#333; }
+.film_area{width: 80%; height: 100%; background-color: #fff; margin: auto;}
+.film_list{width: 100%; height: 100%;}
+.film_list li{float: left; width: 25%; height: 380px; padding: 10px; box-sizing: border-box;}
+
+.img_bg{width: 90%; height: 240px; background-color: #ddd;}
+/* .img_bg:after{width: 100%; height: 100%; background-color: #f93;} */
 /* // #filmBox ==================================================== */
 
 /* #videoBox ====================================================== */
 #videoBox{
   width: 100%; height: 300px;
   background-color: #333;
+  padding: 30px; box-sizing: border-box;
 
 }
+.video{width: 100%; height: 100%; background-color: #888;}
 /* // #videoBox ==================================================== */
 
 /* #photoBox ====================================================== */
 #photoBox{
   width: 100%; height: 480px;
   background-color: #fdfdfd;
-
+  padding: 5rem 1rem; box-sizing: border-box;
 }
+.photo_area{width: 80%; height: 100%; background-color: #fff; margin: auto;}
+.photo_frame{width: 100%; height: 240px; background-color: #333;}
 /* // #photoBox ==================================================== */
 
 /* #searchBox ====================================================== */

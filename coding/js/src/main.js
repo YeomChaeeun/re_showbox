@@ -18,7 +18,7 @@
   
 	headBoxWrap.css({
 		width:'100%', height:headBoxH, backgroundColor:headBoxBg,
-		// position:'fixed', top:0, left:0, zIndex:1000
+		position:'fixed', top:0, left:0, zIndex:1000
 	});
 
   var gnbArr = [
@@ -57,12 +57,13 @@
   var i=0;
   var gnbDt, gnbTitle, gnb_sub, gnbSubLength, gnbSubLink, gnbSubText, gnbSubHref;
   for(; i < gnbArr.length; i++){
-    gnbArea.append('<li><dl> <dt><a href=""></a></dt> <dd></dd> </dl></li>');
+    // gnbArea.append('<li><dl> <dt><a href=""></a></dt> <dd></dd> </dl></li>');
+    gnbArea.append('<li><dl> <dt></dt> <dd></dd> </dl></li>');
 
-    gnbDt = gnbArea.children('li').eq(i).find('dt').children('a');
+    gnbDt = gnbArea.children('li').eq(i).find('dt');
     gnbDt.attr({tabIndex:0});
     gnbTitle = gnbArr[i].title;
-    gnbDt.attr({href:gnbArr[i].link});
+    // gnbDt.attr({href:gnbArr[i].link});
 
     gnbDt.text( gnbTitle );
     gnbArea.find('dd').eq(i).append('<ul class="gnb_sub"></ul>');
@@ -84,15 +85,45 @@
   gnbArea.find('dt').on('mouseenter', function(){
     var thisDt = $(this);
     var thisDd = thisDt.next('dd');
-    gnbArea.find('dd').stop().hide();
-    thisDd.stop().show();
+    gnbArea.find('dd').hide();
+    thisDd.show();
   });
+
   headBox.on('mouseleave', function(){
-    gnbArea.find('dd').stop().hide();
+    gnbArea.find('dd').hide();
   });
 
   // pull_btn
+  var pullBtn = headBox.find('.pull');
+  var navSlideArea = headBox.find('.nav_slide');
+  var navSlideMenu = navSlideArea.find('.nav_slide_m');
+  var gnbClone = gnbArea.children('li').clone();
   
+  navSlideMenu.html(gnbClone);
+  navSlideMenu = navSlideArea.find('.nav_slide_m');
+
+  // slide_menu 
+  pullBtn.on('click',function(e){
+    navSlideArea.show('slide',{direction:'right'},600);
+    pullBtn.addClass('active');
+  });
+  navSlideArea.on('mouseleave',function(){
+    navSlideArea.hide('slide',{direction:'right'},600);
+    pullBtn.removeClass('active');
+  });
+
+
+  navSlideMenu.find('dd').hide();
+  navSlideMenu.find('dt').on('mouseenter',function(){
+    var thisDt = $(this);
+    var thisDd = thisDt.next('dd');
+    navSlideMenu.find('dd').hide();
+    thisDd.show();
+  });
+
+  navSlideMenu.find('.gnb_sub').on('mouseleave',function(){
+    navSlideMenu.find('dd').hide();
+  });
 
 
 

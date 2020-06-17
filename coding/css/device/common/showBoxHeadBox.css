@@ -7,9 +7,14 @@
   padding: 0 42px; box-sizing: border-box;
   background-color: #060C08;  
 }
-h1{float:left; width: 200px; height: 100%; background-color: #f93;}
+h1{float:left; width: 200px; height: 100%; 
+  /* background-color: #f93; */
+  /* background-image: url('../../../img/showbox/n_logo.jpg'); */
+  background-image: url('../../../img/showbox/logo.png');
+  background-position: 50% 50%;
+  background-repeat: no-repeat; 
+}
 #gnbBox{position: relative; left:50px; right:0; width:60%; min-width: 560px; height: auto; margin: auto; background-color: transparent;}
-
 
 .gnb_area{width: 100%; height: auto;}
 .gnb_area>li{float: left; width: 22.5%; height: auto; text-align: center; text-transform: uppercase; color: #fdfdfd;}
@@ -19,30 +24,39 @@ h1{float:left; width: 200px; height: 100%; background-color: #f93;}
 .gnb_area dt{width: 100%; height: 100%; line-height: 90px; position: relative; font-size: 1.1rem; font-weight: bold;}
 .gnb_area dd{width: 100%; height: auto; font-size: 0.9rem;}
 
-header .gnb_sub{position:absolute; top:100%; left:0; right:0; width: 100%; height: auto; background-color: #333;  margin: auto; text-align: center;
+.gnb_area .gnb_sub{
+  position:absolute; top:100%; left:0; z-index: 10;
+  width: 100%; height: auto; 
+  background-color: #333;  
+  margin: auto; text-align: center;
   padding: 0 100rem;  margin: 0 -100rem; 
 }
-.gnb_sub li{display: inline-block; width: auto; height: auto; line-height: 30px; text-align: left; padding: 5px 20px; box-sizing: border-box; }
-
-dt>a:hover, dt>a:focus {
+.gnb_sub li{
+  display: inline-block; 
+  width: auto; height: auto; 
+  line-height: 30px; text-align: left; 
+  padding: 5px 20px; box-sizing: border-box; 
+}
+#headBox dt{cursor: pointer;}
+#headBox dt:hover, dt:focus {
   color: #f93;
 }
-dt>a:before, dt>a:after{
+.gnb_area dt:before, .gnb_area dt:after{
   content: '';
-  border-bottom: solid 3px #666;
+  border-bottom: solid 3px #f93;
   position: absolute;
   bottom: 0;
   width: 0;
 }
-dt>a:before { left: 0; }
-dt>a:after { right: 0; }
+.gnb_area dt:before { left: 0; }
+.gnb_area dt:after { right: 0; }
 
-dt>a:hover:before, dt>a:hover:after,
-dt>a:focus:before, dt>a:focus:after {
+.gnb_area dt:hover:before, .gnb_area dt:hover:after,
+.gnb_area dt:focus:before, .gnb_area dt:focus:after {
   width: 50%;
 }
 
-dt>a:before, dt>a:after {
+.gnb_area dt:before, .gnb_area dt:after {
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
@@ -50,10 +64,47 @@ dt>a:before, dt>a:after {
 dd a:hover{text-decoration: underline;}
 
 
-.sub_area{position:absolute; top:0; right:42px; width: auto; height: 100%;}
-.lang_area{float: left; width: auto; height: 100%; margin-right: 20px;}
+.lang_area{position:absolute; top:0; right:100px; width: auto; height: 100%; margin-right: 20px;}
 .lang_area>ul{width: 60px; height: 30px; margin-top: 30px;}
 .lang_area li{float:left; width: 47%; height: 100%; color: #fdfdfd; line-height: 30px; text-decoration: underline; text-transform: capitalize; text-align: center;} 
 .lang_area li:last-child{float: right;}
-.pull_btn{float: right; width: 30px; height: 30px; margin-top: 30px; background-color: #fdfdfd;}
-/* // #headBox ==================================================== */
+
+.pull{
+  position: absolute;  top:50%; right:42px; z-index: 30; 
+  width: 36px; height: 30px; 
+  margin-top:-15px; 
+  cursor: pointer;
+}
+.pull i{
+  display:block; width: 100%; height: 3px; background-color: #fff; margin-bottom: 10.5px;
+  transition: all 300ms ease;
+}
+.pull i:nth-child(3){margin-bottom: 0;}
+.pull.active i:nth-child(2){background-color: transparent;}
+.pull.active i:nth-child(1){transform: translateY(14px) rotate(45deg);}
+.pull.active i:nth-child(3){transform: translateY(-14px) rotate(-45deg);}
+
+.nav_slide{ 
+  display: none;
+  position: fixed; top:0; right:0; z-index:20; 
+  padding-top: 12%; box-sizing: border-box;
+  width: 50%; height: 100%; 
+  background-color: rgba(51, 51, 51, 0.9); 
+}
+
+.nav_slide_m{position:absolute; width: 100%; height: auto;}
+.nav_slide_m li{width: 100%; height: auto; text-align: center; text-transform: uppercase; color: #fdfdfd;}
+
+.nav_slide_m dl{width: 100%; height: auto;}
+.nav_slide_m dt{width: 100%; height: auto; 
+  font-weight: bold; font-size: 1.5rem; 
+  padding: 1rem; box-sizing: border-box;
+}
+.nav_slide_m dd{width: 100%; height: auto;}
+
+.nav_slide_m .gnb_sub{width: 100%; height: auto;}
+.nav_slide_m .gnb_sub li{width: 100%; height: auto;}
+
+
+
+
