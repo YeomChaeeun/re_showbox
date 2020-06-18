@@ -114,14 +114,19 @@
 
 
   navSlideMenu.find('dd').hide();
+
   navSlideMenu.find('dt').on('mouseenter',function(){
     var thisDt = $(this);
     var thisDd = thisDt.next('dd');
     navSlideMenu.find('dd').hide();
     thisDd.show();
+    thisDt.addClass('active');
   });
 
   navSlideMenu.find('.gnb_sub').on('mouseleave',function(){
+    var thisDt = $(this).parents('dd').prev('dt');
+  
+    thisDt.siblings().removeClass('active');
     navSlideMenu.find('dd').hide();
   });
 

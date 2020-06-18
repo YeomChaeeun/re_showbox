@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
 
-  <link rel="stylesheet" href="../fonts/myFont/fonts.css">
+  <link rel="stylesheet" href="../fonts/fontawesome-5/css/all.css">
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/base/common.css">
   
@@ -55,8 +55,8 @@
     <section id="viewBox">
       <h2 class="hidden">메인 영화 컨텐츠 슬라이드 영역</h2>
       <div class="slide_btn">
-        <button type="button" class="next"><span class="hidden">next</span></button>
-        <button type="button" class="prev"><span class="hidden">prev</span></button>
+        <button type="button" class="next"><i class="fas fa-chevron-right"></i><span class="hidden">next</span></button>
+        <button type="button" class="prev"><i class="fas fa-chevron-left"></i><span class="hidden">prev</span></button>
       </div>
       <div class="indicator">
         <ul class="indi_title full">
@@ -89,14 +89,14 @@
       </div>
       <div class="view_film">
         <ul class="view_film_wrap clearfix">
-          <li class="mv_01"><span class="hidden">영화 관련 이미지 01</span></li>
-          <li class="mv_02"><span class="hidden">영화 관련 이미지 02</span></li>
-          <li class="mv_03"><span class="hidden">영화 관련 이미지 03</span></li>
-          <li class="mv_04"><span class="hidden">영화 관련 이미지 04</span></li>
-          <li class="mv_05"><span class="hidden">영화 관련 이미지 05</span></li>
-          <li class="mv_06"><span class="hidden">영화 관련 이미지 06</span></li>
-          <li class="mv_07"><span class="hidden">영화 관련 이미지 07</span></li>
-          <li class="mv_08"><span class="hidden">영화 관련 이미지 08</span></li>
+          <li class="mv_01"><span>영화 관련 이미지 01</span></li>
+          <li class="mv_02"><span>영화 관련 이미지 02</span></li>
+          <li class="mv_03"><span>영화 관련 이미지 03</span></li>
+          <li class="mv_04"><span>영화 관련 이미지 04</span></li>
+          <li class="mv_05"><span>영화 관련 이미지 05</span></li>
+          <li class="mv_06"><span>영화 관련 이미지 06</span></li>
+          <li class="mv_07"><span>영화 관련 이미지 07</span></li>
+          <li class="mv_08"><span>영화 관련 이미지 08</span></li>
         </ul>
       </div>
 
@@ -115,12 +115,17 @@
     <!-- #videoBox -->
     <article id="videoBox">
       <h2 class="hidden">현재 상영작 예고편</h2>
-      <div class="video">
-        <!-- <video controls loop muted poster="../img/img_02.jpg">
+      <div class="movie_play iframe_area">
+        <!-- 2차 예고편 video 파일 -->
+        <video controls loop muted poster="../img/movieBox/movie_thum.jpg">
           <source  src="../media/video/video_01.webm" type="video/webm" />
-          <source  src="../media/video/video_01.mp4" type="video/mp4" />
+          <source  src="../media/video/2nd_movie_preview.mp4" type="video/mp4" />
           <p>사용하고 계신 브라우저는 멀티미디어 호환이 되지 않으니 <a href="http://google.com/chrome">최신브라우저</a>를 설치하여 사용하세요.</p>      
-        </video> -->
+        </video>
+        <!-- 1차 예고편 -->
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/BIKz5KQpiog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <!-- 2차 예고편 -->
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/FqyHdERatW8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </div>
 
     </article>
@@ -139,7 +144,18 @@
 
     <!-- #searchBox -->
     <article id="searchBox">
-      <h2>페이지 내 검색 영역</h2>
+      <h2 class="hidden">페이지 내 검색 영역</h2>
+      <div class="search_icon"><i class="fas fa-search"></i><span class="hidden">search icon design</span></div>
+      <div class="search_area">
+        <fieldset>
+          <legend class="hidden">search</legend>
+          <input type="text" id="searchArea" name="search" value placeholder="검색어를 입력하세요.">
+
+          <div class="store_btn_area">
+            <button type="button" class="sendBtn"><i class="fas fa-search"></i><span class="hidden">검색</span></button>
+          </div>
+        </fieldset>
+      </div>
 
     </article>
     <!-- // #searchBox -->
@@ -169,6 +185,7 @@
   <script src="../js/src/main.js"></script>
   <script src="../js/src/main_viewBox.js"></script>
   <script src="../js/src/main_filmBox.js"></script>
+  <script src="../js/src/main_videoBox.js"></script>
     
 </body>
 </html>

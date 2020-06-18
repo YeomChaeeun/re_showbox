@@ -17,8 +17,11 @@
 
 /* indicator */
 .indicator{position:absolute; left:0; bottom:0; width: 100%; height: 60px; background-color: #060C08; overflow: hidden;}
-.indi_title{width: 250%; height: 100%;}
-.indi_title li{float:left; width: 12.5%; height: 100%; text-align: center; color: #ddd; text-transform: uppercase; line-height: 60px; font-size: 1.2rem;}
+.indi_title{width: 250%; height: 100%; padding: 10px 0; box-sizing: border-box;}
+.indi_title li{float:left; width: 12.5%; height: 100%; text-align: center; color: #ddd; text-transform: uppercase; line-height: 40px; font-size: 1.2rem; border-right: 2px solid #ddd;}
+
+
+
 .indi_title li.active{font-weight: bold;}
 
 /* 화면 전체 이미지 */
@@ -28,7 +31,11 @@
   overflow: hidden;
 }
 .view_film_wrap{width: 800%; height: 100%; }
-.view_film li{float:left; width: 12.5%; height: 100%;}
+.view_film li{
+  float:left; 
+  width: 12.5%; height: 100%;
+}
+.view_film li span{position: relative;; top: 100px; left:10%; display: block; width: 200px; height: 200px; z-index: 10;}
 .mv_01{background-color: #aaa;}
 .mv_02{background-color: #999;}
 .mv_03{background-color: #888;}
@@ -37,6 +44,7 @@
 .mv_06{background-color: #555;}
 .mv_07{background-color: #444;}
 .mv_08{background-color: #333;}
+
 
 .viewBanner_content{position:absolute; left:10%; bottom:100px; width: 50%; height: 30%;}
 .viewBanner_bg{width: 100%; height: auto;}
@@ -63,8 +71,40 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 .film_list{width: 100%; height: 100%;}
 .film_list li{float: left; width: 25%; height: 380px; padding: 10px; box-sizing: border-box;}
 
-.img_bg{width: 90%; height: 240px; background-color: #ddd;}
-/* .img_bg:after{width: 100%; height: 100%; background-color: #f93;} */
+.img_bg{width: 90%; height: 240px; background-color: #ddd; position: relative;}
+
+
+#filmBox a .img_bg:before {
+  content:" "; display: block;
+  position: absolute; top:0; left:0; width: 100%; height: 100%; 
+  width: 100%; height: 100%; background-color: rgba(251, 151,57, 0);
+  transition:background-color 300ms linear;
+ }
+ 
+ #filmBox a:hover .img_bg:before, 
+ #filmBox a:focus .img_bg:before{
+   background-color: rgba(251, 151,57, 0.7);
+ }
+ 
+ #filmBox a .img_bg:after{
+   content:" "; display: block;
+    width: 100%; height: 100%;
+    position: absolute; top:0; left: 0;
+    /* background-image: url('../../../../img/new_menu/menu_on.png'); */
+    background-repeat: no-repeat;
+    background-position: 50% 300%;
+    background-size: 100% auto;
+    transition:all 200ms linear 100ms;
+    opacity: 0;
+ } 
+ 
+ #filmBox a:hover .img_bg:after,
+ #filmBox a:focus .img_bg:after{
+   opacity: 1; background-position-y:-50%;
+ }
+
+
+
 /* // #filmBox ==================================================== */
 
 /* #videoBox ====================================================== */
@@ -72,9 +112,16 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
   width: 100%; height: 300px;
   background-color: #333;
   padding: 30px; box-sizing: border-box;
-
+  overflow: hidden;
 }
-.video{width: 100%; height: 100%; background-color: #888;}
+.iframe_area,.movie_play{width: 100%; height: 100%; background-color: #888;}
+.movie_play video{width: 100%; height: 100%;}
+/* .movie_play video{
+  position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 50;
+  width: auto; height: auto; min-width: 100%; min-height: 100%;
+} */
+
+
 /* // #videoBox ==================================================== */
 
 /* #photoBox ====================================================== */
@@ -93,6 +140,46 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
   background-color: #060C08;
 
 }
+.search_icon{
+  position: relative; top:-40px; left:0; right:0; margin: auto;
+  width: 90px; height:90px; border-radius:100%;
+  background-color: #060C08; 
+  color: #fdfdfd; text-align: center; line-height: 70px; font-size: 2rem;
+}
+.search_area{
+  width: 100%; height: auto;
+}
+.search_area>fieldset{
+  position: relative;
+  width: 70%; height: auto;
+  margin: auto;
+}
+.search_area>fieldset>input{
+  outline: 0;
+  border-top-left-radius: 25px; border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px; border-bottom-right-radius: 25px;
+}
+#searchArea{
+  display: inline-block;
+  width: 100%; height: 50px;
+  padding: 6px 10px 0; box-sizing: border-box;
+  border: 3px solid #333;
+  background-color: #fdfdfd;
+  text-align: left;
+  line-height: 40px;
+  font-size: 1rem;
+}
+.store_btn_area{
+  position: absolute; top: 10px; right: 20px;
+  width: auto; height: auto;
+}
+.sendBtn{
+  display: inline-block;
+  width: 30px; height: 30px;
+  margin-left: 10px;
+  font-size: 1.5rem; color: #060C08;
+}
+
 /* // #searchBox ==================================================== */
 
 /* #aboutBox ====================================================== */
