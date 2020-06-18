@@ -110,16 +110,74 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 /* #videoBox ====================================================== */
 #videoBox{
   width: 100%; height: 300px;
-  background-color: #333;
-  padding: 30px; box-sizing: border-box;
+  background-color: #060c08;
+  padding: 5px; box-sizing: border-box;
   overflow: hidden;
 }
-.iframe_area,.movie_play{width: 100%; height: 100%; background-color: #888;}
-.movie_play video{width: 100%; height: 100%;}
-/* .movie_play video{
-  position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 50;
-  width: auto; height: auto; min-width: 100%; min-height: 100%;
-} */
+.movie_play{
+  width: 100%; height: 100%; background-color: #888;
+  background-image: url("../../../img/movieBox/movie_thum.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+/* modal css */
+.big_modal{
+  display: none;
+  position: fixed; top: 0; left: 0; z-index: 1500;
+  width: 100%; height: 100%;
+}
+.big_movie{
+  position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;
+  width: 90%; height: 70%;
+  box-sizing: border-box;
+  background-color: #000;
+  border-radius: 0.2rem;
+  padding: 3rem 1rem; box-sizing: border-box;
+}
+.video_info{width: 0; height: 0;}
+.big_movie video{width: 100%; height: 100%; margin: auto;}
+
+.close_btn{
+  position: absolute; right: 0; top: 0;
+  width: 3rem; height: 3rem;
+  box-sizing: border-box;
+  border-radius: 100%;
+}
+.close_btn>button{
+  position: relative;
+  display: block;
+  width: 100%; height: 100%; border-radius: 100%;
+}
+.close_btn>button:before,
+.close_btn>button:after{
+  content: " "; display: block; position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0; margin: auto;
+  width: 70%; height: 4px; background-color: #fff;
+  /* box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.8); */
+  /* border-radius: 2px; */
+  transition: transform 500ms ease;
+}
+.close_btn>button:before{
+  transform: rotate(45deg);
+}
+.close_btn>button:after{
+  transform: rotate(-45deg);
+}
+.close_btn>button:hover:before,
+.close_btn>button:focus:before{
+  transform: rotate(180deg) translateY(-10px);
+}
+.close_btn>button:hover:after,
+.close_btn>button:focus:after{
+  transform: rotate(180deg) translateY(10px);
+}
+.big_bg{
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
 
 /* // #videoBox ==================================================== */
