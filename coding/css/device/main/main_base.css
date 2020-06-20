@@ -20,11 +20,9 @@
 .indi_title{width: 250%; height: 100%; padding: 10px 0; box-sizing: border-box;}
 .indi_title li{float:left; width: 12.5%; height: 100%; text-align: center; color: #ddd; text-transform: uppercase; line-height: 40px; font-size: 1.2rem; border-right: 2px solid #ddd;}
 
-
-
 .indi_title li.active{font-weight: bold;}
 
-/* 화면 전체 이미지 */
+/* 화면 전체 이미지 슬라이드 */
 .view_film{
   position: absolute; top: 0; left: 0; z-index: -1;
   width: 100%; height: 100%; 
@@ -36,6 +34,7 @@
   width: 12.5%; height: 100%;
 }
 
+/* viewBox 슬라이드 추가 설명 영역 */
 .viewBanner_content{position:absolute; left:10%; bottom:100px; width: 50%; height: 30%;}
 .viewBanner_content h3{color: #fdfdfd; text-shadow: 0.2rem 0.2rem 0.2rem #060c08;}
 .viewBanner_content h3:after{background-color: #f93; box-shadow: 0.1rem 0.1rem 0.1rem #573a00; margin-top: 5px;}
@@ -66,7 +65,7 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 
 .img_bg{width: 90%; height: 240px; position: relative;}
 
-
+/* poster hover, focus 이미지 */
 #filmBox a .img_bg:before {
   content:" "; display: block;
   position: absolute; top:0; left:0; width: 100%; height: 100%; 
@@ -96,8 +95,6 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
    opacity: 1; background-position-y:-50%;
  }
 
-
-
 /* // #filmBox ==================================================== */
 
 /* #videoBox ====================================================== */
@@ -107,6 +104,7 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
   padding: 5px; box-sizing: border-box;
   overflow: hidden;
 }
+
 .movie_play{
   width: 100%; height: 100%; background-color: #888;
   background-image: url("../../../img/movieBox/movie_thum.jpg");
@@ -124,7 +122,8 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 }
 .big_movie{
   position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;
-  width: 90%; height: 70%;
+  width: 90%; height: 90%;
+  /* max-width: 1300px; max-height: 1000px; */
   box-sizing: border-box;
   background-color: #000;
   border-radius: 0.2rem;
@@ -159,19 +158,19 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 .close_btn>button:after{
   transform: rotate(-45deg);
 }
-.close_btn>button:hover:before,
+/* close_btn 애니메이션 css */
+/* .close_btn>button:hover:before,
 .close_btn>button:focus:before{
   transform: rotate(180deg) translateY(-10px);
 }
 .close_btn>button:hover:after,
 .close_btn>button:focus:after{
   transform: rotate(180deg) translateY(10px);
-}
+} */
 .big_bg{
   width: 100%; height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
-
 
 /* // #videoBox ==================================================== */
 
@@ -179,10 +178,29 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 #photoBox{
   width: 100%; height: 480px;
   background-color: #fdfdfd;
-  padding: 5rem 1rem; box-sizing: border-box;
+  padding: 5rem 0rem; box-sizing: border-box;
 }
 .photo_area{width: 80%; height: 100%; background-color: #fff; margin: auto;}
-.photo_frame{width: 100%; height: 240px; background-color: #333;}
+.photo_frame{width: 100%; height: 240px; 
+  /* padding: 0 10rem;
+  margin: 0 -10rem; */
+  background-image: url('../../../img/photoBox/1x/photoBox_bg_long.png');
+  background-repeat: repeat;
+  background-size: auto 100%;
+  background-position: left top;
+  padding: 3% 0; box-sizing: border-box;
+}
+.photo_list{width: 100%; height: 100%;}
+.photo_list li{float: left; width: 10%; height: 100%;}
+.photo_list li .img_bg{width: 100%; height: 100%;}
+.photo_list li:nth-child(1){background-color: #111;}
+.photo_list li:nth-child(2){background-color: #222;}
+.photo_list li:nth-child(3){background-color: #333;}
+.photo_list li:nth-child(4){background-color: #444;}
+.photo_list li:nth-child(5){background-color: #555;}
+.photo_list li:nth-child(6){background-color: #666;}
+.photo_list li:nth-child(7){background-color: #777;}
+.photo_list li:nth-child(8){background-color: #999;}
 /* // #photoBox ==================================================== */
 
 /* #searchBox ====================================================== */
@@ -237,7 +255,7 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 #aboutBox{
   width: 100%; height: 480px;
   background-color: #f93;
-
+  padding: 5rem 0rem; box-sizing: border-box;
 }
 .about_area{width: 80%; height: 100%; margin: auto;}
 /* // #aboutBox ==================================================== */

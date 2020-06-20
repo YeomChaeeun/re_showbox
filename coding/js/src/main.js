@@ -101,6 +101,7 @@
   
   navSlideMenu.html(gnbClone);
   navSlideMenu = navSlideArea.find('.nav_slide_m');
+  navSlideMenuDt = navSlideMenu.find('dt');
 
   // slide_menu 
   pullBtn.on('click',function(e){
@@ -123,14 +124,42 @@
     thisDt.addClass('active');
   });
 
-  navSlideMenu.find('.gnb_sub').on('mouseleave',function(){
+  navSlideMenu.find('dl').on('mouseleave',function(){
     var thisDt = $(this).parents('dd').prev('dt');
-  
-    thisDt.siblings().removeClass('active');
+    
+    navSlideMenuDt.removeClass('active');    
     navSlideMenu.find('dd').hide();
   });
 
 
+
+  // scrooll 내려갈때 headBox 숨겼다가 올라갈때 나타나게 함
+  var mouseOk = true;
+  $(document).on('mousewheel DOMMouseScroll',function(e){
+    // console.log(e.type);
+    // console.log(e.originalEvent.wheelDelta);
+    // console.log(e.originalEvent.detail);
+    if(mouseOk){
+      mouseOk=false;
+      var evt = e.originalEvent;
+      var mouseResult;
+      if(evt.wheelDelta){
+        mouseResult = -evt.wheelDelta;
+      }else{
+        mouseResult = evt.detail*40;
+      }
+    }
+    console.log(mouseResult);
+    // -----------------------------------------------------
+
+    if(mouseResult<0){
+      headBoxWrap.slideDown();
+    }else if(mouseResult>0){
+      headBoxWrap.slideUp();
+    }
+      mouseOk=true;
+  });
+    
 
   
   // end

@@ -1,6 +1,6 @@
 /* showBoxHeadBox.css */
 
-
+/* base : 1024px tablet */
 #headBox{
   position: relative;
   width: 100%; height: 90px; max-width: 1440px; margin: auto;
