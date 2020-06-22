@@ -3,6 +3,11 @@
 (function($){
   // start
 
+  var btnok = true;
+  var n = 0;
+  var k;
+  
+
   // photoThumList
   var photoList = [
     {no: '1', img:'movie_01.png', Pcimg:'movie_01.jpg', link: 'movie_01_info.html', imgNarr : '영화 01', title: '국제수사',  date: '2020', content: 'lorem ...', },
@@ -21,12 +26,12 @@
   var photoBox = $('#photoBox');
   var PhotoFrame = photoBox.find('.photo_frame');
   PhotoFrame.append('<ul class="photo_list clearfix"></ul>');
-  var PhotoFrameUl = PhotoFrame.children('ul');
+  var PhotoFrameUl = PhotoFrame.children('.photo_list');
 
   var textEl = function(i){
     var	listEl = '<li>\
             <a href="#">\
-              <div class="img_bg"><span class="hidden">'+ photoList[i].imgNarr +'</span></div>\
+              <div class="img_bg"><span>'+ photoList[i].imgNarr +'</span></div>\
             </a>\
             </li>';
     return listEl;
@@ -42,6 +47,62 @@
       backgroundSize:'cover'
     })
   }
+
+  var mvLength = 2; 
+  var PhotoFrameLi = PhotoFrameUl.find('li'); 
+  // var photoLast = PhotoFrameLi.eq(-1*(mvLength+1)).nextAll('li');
+  // PhotoFrameUl.prepend(photoLast);
+  photoLastLi = PhotoFrameUl.find('li');
+  var photoBtnArea = PhotoFrame.find('.btn_area');
+  var photoBtn = PhotoFrame.find('button');
+   
+  PhotoFrameUl.css({width:250+'%'});
+
+  var phoFirstSize = PhotoFrameLi.eq(1).outerWidth(true)*mvLength;
+  // PhotoFrameUl.css({marginLeft:-phoFirstSize+'px'});
+  PhotoFrameUl.css({position:'relative'});
+
+  photoBtnArea.children('.prev').hide();
+  var btnView = function(){
+    if(n<=0){
+      photoBtnArea.children('.prev').hide();
+      photoBtnArea.children('.next').show();
+    }else if(n>=2){
+      photoBtnArea.children('.prev').show();
+      photoBtnArea.children('.next').hide();
+    }
+    else{
+      photoBtn.show();
+    }
+  };
+  photoBtn.on('click',function(e){
+    e.preventDefault();
+    var thisIt = $(this)[0];
+    var nextBtn = photoBtnArea.children('.next')[0];
+    if(thisIt == nextBtn){
+      photoBtn.hide();
+      n+=1;
+      PhotoFrameUl.animate({left:-n*phoFirstSize+'px'}, function(){
+        // materialBtn.show();
+        btnView();
+      });
+    }else{
+      photoBtn.hide();
+      n-=1;
+      PhotoFrameUl.animate({left:-n*phoFirstSize+'px'}, function(){
+        // materialBtn.show();
+        btnView();
+      });
+    }
+  });
+  
+  // photoBtn.on('click', function(e){
+  //   e.preventDefault();
+  //   var clickIt = $(this)[0];
+  //   if(clickIt == $('.next')[0]){
+  //   }else if(btnOk){ }
+  // });
+
 
   // end
 })(jQuery);
