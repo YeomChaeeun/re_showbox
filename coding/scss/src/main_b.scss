@@ -1,0 +1,27 @@
+// main_b.scss
+/* main_b.css */
+
+// base setting
+@import "../setting/color";
+@import "../setting/mixin";
+
+// ----------------------------------------------------------------------------
+// h2{font-size: $titleFont;}
+// h3{font-size: $titleFont2;}
+// h2,h3,h4,h5,h6,p,div,ul,li,ol,dl,dt,dd{font-family: $fontFamily;}
+
+// ----------------------------------------------------------------------------
+
+#wrap{
+  // overflow: visible; overflow-x: hidden;
+  width: 100%; min-width: 1400px;
+  height: auto; min-height: 900px;
+  margin: auto;
+  background-color: $sample;
+} // #wrap
+
+  // design layout
+  @import "../parts/header";
+  @import "../parts/viewBox";
+  @import "../parts/footer";
+

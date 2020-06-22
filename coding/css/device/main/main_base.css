@@ -106,6 +106,7 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 }
 
 .movie_play{
+  position: relative;
   width: 100%; height: 100%; background-color: #888;
   background-image: url("../../../img/movieBox/movie_thum.jpg");
   background-repeat: no-repeat;
@@ -113,6 +114,23 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
   background-size: 100%;
   cursor: pointer;
 }
+
+.btn_area{ 
+  position: absolute; top: 50%; left: 50%;  
+  width: auto; height: auto;
+  transform: translateX(-50%);
+  margin-top: -1.5rem;
+  color: #fdfdfd;
+  font-size: 3rem;
+}
+
+.movie_info{ 
+  position: absolute;
+  bottom: 20%; left: 10%;
+  width: 100%; height: 20%;
+  color: #fdfdfd;
+}
+.movie_info h3:after{background-color: #ddd;} 
 
 /* modal css */
 .big_modal{
@@ -180,7 +198,24 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
   background-color: #fdfdfd;
   padding: 5rem 0rem; box-sizing: border-box;
 }
-.photo_area{width: 80%; height: 100%; background-color: #fff; margin: auto;}
+.photo_area{
+  position:relative;
+  width: 80%; height: 100%; background-color: #fff; margin: auto;
+}
+
+#photoBox .btn_area{
+  position: absolute; top: 50%; left: 50%;
+  transform: translateX(-50%);
+  width: 110%; height: 0;
+  margin-top: -15px;
+}
+#photoBox .btn_area>button{
+  float: left;
+  width: 30px; height: 30px;
+  background-color: #000;
+}
+#photoBox .btn_area>button:first-child{float: right;}
+
 .photo_frame{width: 100%; height: 240px; 
   /* padding: 0 10rem;
   margin: 0 -10rem; */
@@ -188,7 +223,7 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
   background-repeat: repeat;
   background-size: auto 100%;
   background-position: left top;
-  padding: 3% 0; box-sizing: border-box;
+  padding: 20px 0; box-sizing: border-box;
 }
 .photo_list{width: 100%; height: 100%;}
 .photo_list li{float: left; width: 10%; height: 100%;}
@@ -205,7 +240,8 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 
 /* #searchBox ====================================================== */
 #searchBox{
-  width: 100%; height: 420px;
+  width: 100%; height: 220px;
+  /* height: 420px; */
   background-color: #060C08;
 
 }
@@ -253,17 +289,22 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 
 /* #aboutBox ====================================================== */
 #aboutBox{
+  position: relative;
   width: 100%; height: 480px;
   background-color: #f93;
   padding: 5rem 0rem; box-sizing: border-box;
 }
 .about_area{width: 80%; height: 100%; margin: auto;}
-/* // #aboutBox ==================================================== */
-
-/* #footBox ====================================================== */
-#footBox{
-  width: 100%; height: 240px;
-  background-color: #060C08;
-
+.about_img{
+  position: absolute; top: 0; right: 0;
+  width: 50%; height: 100%;
+  /* background-color: #ddd; */
+  background-image: url('../../../img/showbox/bg-pattern.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto;
 }
-/* // #footBox =================================================== */
+.about_info{
+  width: 60%; height: auto; 
+}
+/* // #aboutBox ==================================================== */

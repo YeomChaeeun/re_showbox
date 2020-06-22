@@ -4,13 +4,15 @@
   // start
 
   var videoInfo = {
-    title:'title01', 
+    title:'title', 
+    content:'비디오 설명~~',
     videoNarr:'lorem...', 
     mp4:'../media/video/2nd_movie_preview.mp4', 
     thum:'../img/movieBox/movie_thum.jpg'
   };
 
   var videoBox = $('#videoBox');
+  var moviePlay = videoBox.find('.movie_play');
   var bigModalText = '<div class="big_modal">\
             <div class="big_movie">\
               <div class="video_info"><span class="hidden">'+videoInfo.videoNarr+'</span></div>\
@@ -24,6 +26,9 @@
             <div class="big_bg"></div></div>';
 
   videoBox.append(bigModalText);
+  moviePlay.find('.movie_info').children('h3').text(videoInfo.title);
+  moviePlay.find('.movie_info').children('p').text(videoInfo.content);
+
   var bigModal = videoBox.children('.big_modal');
   var bigModalBtn = bigModal.find('.close_btn');
   var movieBox = bigModal.find('.big_movie');

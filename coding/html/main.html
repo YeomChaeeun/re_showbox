@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/base/common.css">
   
   <link rel="stylesheet" href="../css/device/common/showBoxHeadBox.css">
+  <link rel="stylesheet" href="../css/device/common/showBoxFootBox.css">
   
   <link rel="stylesheet" href="../css/src/main.css">
 
@@ -115,7 +116,15 @@
     <!-- #videoBox -->
     <article id="videoBox">
       <h2 class="hidden">현재 상영작 예고편</h2>
-      <div class="movie_play"></div>
+      <div class="movie_play">
+        <div class="btn_area full">
+          <a href="#"><i class="far fa-play-circle"></i><span class="hidden">예고편 play button</span></a>
+        </div>
+        <div class="movie_info">
+          <h3>title</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio illo sunt eligendi doloremque incidunt.</p>
+        </div>
+      </div>
       <!-- <div class="movie_play"> -->
         <!-- 2차 예고편 video 파일 -->
         <!-- <video controls loop muted poster="../img/movieBox/movie_thum.jpg">
@@ -136,6 +145,10 @@
       <h2 class="hidden">현재 상영작 및 영화 스틸컷</h2>
       <div class="photo_area">
         <h3>photos</h3>
+        <div class="btn_area">
+          <button type="button" class="next"><span class="hidden">next</span></button>
+          <button type="button" class="prev"><span class="hidden">prev</span></button>
+        </div>
         <div class="photo_frame"></div>
 
       </div>
@@ -165,6 +178,11 @@
       <h2 class="hidden">회사 간단한 소개 영역</h2>
       <div class="about_area">
         <h3>showbox</h3>
+        <div class="about_img"></div>
+        <div class="about_info">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi ut culpa quasi autem voluptate commodi pariatur, ab adipisci aut, vitae odit, tempore est facere assumenda voluptatum omnis? Excepturi, velit quisquam.</p><br />
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, perspiciatis consequuntur quia blanditiis aut provident ipsam aliquam fuga qui, natus doloribus ab, repellendus harum quae tempore. Ullam facere exercitationem culpa!</p>
+        </div>
 
       </div>
 
@@ -183,6 +201,8 @@
   <script src="../js/base/jquery-3.5.1.min.js"></script>
   <script src="../js/base/jquery-ui.min.js"></script>
   <script src="../js/src/main.js"></script>
+  <script src="../js/src/main_headBox.js"></script>
+  <script src="../js/src/main_footBox.js"></script>
   <script src="../js/src/main_viewBox.js"></script>
   <script src="../js/src/main_filmBox.js"></script>
   <script src="../js/src/main_videoBox.js"></script>
