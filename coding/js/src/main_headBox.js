@@ -2,7 +2,8 @@
 
 (function($){
   // start
-	var win = $(window);
+  var win = $(window);
+  var winW = win.width();
 	var winH = win.height();
 
 	var wrap = $('#wrap');
@@ -17,7 +18,7 @@
   var headBoxBg = headBox.css('backgroundColor');
   
 	headBoxWrap.css({
-		width:'100%', height:headBoxH, backgroundColor:headBoxBg,
+		width:'100%', height:headBoxH, backgroundColor:'#060c08',
 		position:'fixed', top:0, left:0, zIndex:1000
 	});
 
@@ -82,16 +83,22 @@
 
   gnbArea.find('dd').hide();
 
-  gnbArea.find('dt').on('mouseenter', function(){
-    var thisDt = $(this);
-    var thisDd = thisDt.next('dd');
-    gnbArea.find('dd').hide();
-    thisDd.show();
-  });
+  var mob = function(){
+    gnbBox.hide();
+  };
 
-  headBox.on('mouseleave', function(){
-    gnbArea.find('dd').hide();
-  });
+  var pcFull =function(){
+    gnbArea.find('dt').on('mouseenter', function(){
+      var thisDt = $(this);
+      var thisDd = thisDt.next('dd');
+      gnbArea.find('dd').hide();
+      thisDd.show();
+    });
+  
+    headBox.on('mouseleave', function(){
+      gnbArea.find('dd').hide();
+    });
+  };
 
   // pull_btn
   var pullBtn = headBox.find('.pull');
@@ -104,10 +111,25 @@
   navSlideMenuDt = navSlideMenu.find('dt');
 
   // slide_menu 
+  var navSlideAreaDis = navSlideArea.css('display');
+  var btnOk = true;
+
   pullBtn.on('click',function(e){
-    navSlideArea.show('slide',{direction:'right'},600);
-    pullBtn.addClass('active');
+    e.preventDefault();
+    navSlideAreaDis = navSlideArea.css('display');
+    console.log(navSlideAreaDis);
+    if(navSlideAreaDis=='none' && btnOk){
+      btnOk=false;
+      navSlideArea.show('slide',{direction:'right'},600);
+      pullBtn.addClass('active');
+    }else if(navSlideAreaDis=='block'){
+      btnOk=false;
+      navSlideArea.hide('slide',{direction:'right'},600);
+      pullBtn.removeClass('active');
+    }
+    btnOk=true;
   });
+
   navSlideArea.on('mouseleave',function(){
     navSlideArea.hide('slide',{direction:'right'},600);
     pullBtn.removeClass('active');
@@ -160,6 +182,27 @@
       mouseOk=true;
   });
     
+
+  if(winW<1024){
+    mob();
+  }else if(winW>=1024){
+    pcFull();
+  }
+
+
+  // top ------------------------------------------------------------
+
+  // var topMvBtn = $('.top_btn_area');
+
+  // topMvBtn.hide();
+  // $(window).on('scroll', function(){
+  //   var winScroll = $(window).scrollTop();
+  //   (winScroll>=300)? topMvBtn.stop().fadeIn(300) : topMvBtn.stop().fadeOut(300);
+  // });
+
+  // topMvBtn.on('click',['a'],function(e){
+  //   $('html, body').animate({scrollTop:0},300);
+  // });
 
   
   // end

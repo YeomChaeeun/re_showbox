@@ -73,7 +73,7 @@
     var winTop = win.scrollTop();
     var winTop2 = winTop + winH;
     if(winTop2>videoOffset && winTop2<=videoOffset+videoH){
-      console.log('!!!!!!! ------------------------1'+(videoOffset-winTop2)/20);
+      // console.log('!!!!!!! ------------------------1'+(videoOffset-winTop2)/20);
       MoviePlayThum.css({backgroundPositionY: (videoOffset-winTop2)/20*10+'px'});
     }
   });
