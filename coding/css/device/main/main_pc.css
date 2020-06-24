@@ -2,9 +2,12 @@
 
 @media screen and (min-width:1440px) and (max-width:1919px){
 
+  .area_full{max-width: 1100px;}
+  /* #viewBox */
 
-
-
+  /* #filmBox */
+  .film_area{max-width: 1100px;}
+  .film_list li{width: 20%; height: 380px;}
 
 
   /* @media end */

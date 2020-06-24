@@ -105,10 +105,19 @@
   var navSlideArea = headBox.find('.nav_slide');
   var navSlideMenu = navSlideArea.find('.nav_slide_m');
   var gnbClone = gnbArea.children('li').clone();
+  var snsText = '<div class="sns_part">\
+      <div><a href="#"><span class="hidden">facebook</span></a></div>\
+      <div><a href="#"><i class="fas fa-envelope"></i><span class="hidden">email address</span></a></div>\
+    </div>';
   
   navSlideMenu.html(gnbClone);
   navSlideMenu = navSlideArea.find('.nav_slide_m');
   navSlideMenuDt = navSlideMenu.find('dt');
+  
+  // sns area
+  navSlideMenu.append(snsText);
+  var navSns = navSlideArea.find('.sns_part');
+
 
   // slide_menu 
   var navSlideAreaDis = navSlideArea.css('display');

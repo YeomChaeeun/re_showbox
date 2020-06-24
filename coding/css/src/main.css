@@ -1,11 +1,10 @@
 /* main.css */
 
 @import url("../device/main/main_base.css");
-@import url("../device/main/main_mob_v.css");
-@import url("../device/main/main_mob_h.css");
+@import url("../device/main/main_mob.css");
 @import url("../device/main/main_tab.css");
+@import url("../device/main/main_laptop.css");
 @import url("../device/main/main_pc.css");
 @import url("../device/main/main_pcfull.css");
 
 
-/* touch main_base.css main_mob_v.css main_mob_h.css main_tablet.css main_pc.css main_pcfull.css */

@@ -1,8 +1,13 @@
 /* main_tab.css */
 
-@media screen and (min-width:1024px) and (max-width:1439px){
+@media screen and (min-width:640px) and (max-width:1023px){
 
+  .area_full{max-width: 580px;}
+  /* viewBox */
 
+  /* #filmBox */
+  .film_area{max-width: 580px;}
+  .film_list li{width: 33.333333%; height: 379px;}
 
 
 

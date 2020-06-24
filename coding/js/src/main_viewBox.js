@@ -48,7 +48,7 @@
     viewFilmLi.eq(i).css({
       backgroundImage:'url('+ Url + MainfilmList[i].Pcimg +')',
       backgroundRepeat:'no-repeat',
-      backgroundPosition:'50% 0',
+      backgroundPosition:'50% 10%',
       backgroundSize:'cover'
     })
   }

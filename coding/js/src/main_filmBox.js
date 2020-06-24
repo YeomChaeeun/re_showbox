@@ -39,7 +39,7 @@
       backgroundImage:'url('+ imgUrl + filmList[i].Pcimg +')',
       backgroundRepeat:'no-repeat',
       backgroundPosition:'50% 50%',
-      backgroundSize:'cover'
+      backgroundSize:'contain'
     })
   }
 
