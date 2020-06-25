@@ -2,6 +2,9 @@
 
 (function($){
   // start
+  var win = $(window);
+  var winW = win.width();
+
   var filmList = [
     {no: '1', img:'movie_01.png', Pcimg:'movie_01.jpg', link: 'movie_01_info.html', imgNarr : '영화 01', title: '국제수사',  date: '2020', content: 'lorem ...', },
     {no: '2', img:'movie_02.png', Pcimg:'movie_02.jpg', link: 'movie_02_info.html', imgNarr : '영화 02', title: '남산의 부장들', date: '2020.01.22', content: 'lorem ...', },
@@ -42,6 +45,78 @@
       backgroundSize:'contain'
     })
   }
+
+  var filmUl = filmBox.find('.film_list');
+  var filmLi = filmUl.find('li');
+  var slideBtn = filmBox.find('.slide_btn').find('button');
+
+  var n=0;
+  var k;
+  var btnOk = true;
+  var timed = 600;
+
+  var mobFilm = function(){    
+    var liLast = filmLi.eq(-1).clone(true);
+    filmUl.prepend(liLast);
+
+    filmLi = filmUl.find('li');
+    var filmLiLen = filmLi.length;
+    // console.log(filmLiLen);
+    var liWidth = 100/filmLiLen;
+    filmUl.css({width:filmLiLen*100+'%',transform:'translateX(-' + liWidth + '%)'});
+    filmLi.css({width:liWidth+'%'});
+    filmUl.css({position:'relative'});
+
+    //button
+    slideBtn.on('click',function(e){
+      e.preventDefault();
+      var clickIt = $(this)[0];
+      k = n;
+      if(clickIt == $('.next')[1]){
+        // 다음 버튼 클릭
+        btnOk = false;
+        n+=1;
+        filmUl.stop().animate({left: -n* 100 + '%'}, function(){
+          if(n>=filmLiLen-2){
+            n = -1;
+            filmUl.css({'left':100+'%'});
+          }
+          btnOk = true;
+        });
+      }else if(btnOk){
+        // 이전 버튼 클릭
+        btnOk = false;
+        n-=1;
+
+        filmUl.stop().animate({left: -n * 100 + '%'}, function(){
+          if(n<0){
+            n=filmLiLen-2;
+            filmUl.css({'left':-n*100+'%'});
+          }
+          btnOk = true;
+        });     
+      }
+    });
+  }
+  
+
+  if(winW<640){
+    mobFilm();
+  }
+  
+  // 자동 슬라이드 기능
+  var SetSlideInterval;
+  var mySlideGo = function(){
+    SetSlideInterval = setInterval(function(){
+      slideBtn.trigger('click');
+    }, timed*6);
+  }
+  var mySlideStop = function(){
+    clearInterval(SetSlideInterval);  
+  }
+
+  mySlideGo(); 
+  filmBox.on({mouseenter:mySlideStop,mouseleave:mySlideGo});
 
   // end
 })(jQuery);

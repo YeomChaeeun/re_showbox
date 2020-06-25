@@ -3,7 +3,11 @@
 (function($){
   // start
 
+  var win = $(window);
+  var winH = win.innerHeight();
+
   var viewBox = $('#viewBox');
+  // viewBox.css({height:winH});
   var slideBtn = viewBox.children('.slide_btn').find('button');
 
   var viewFilm = viewBox.children('.view_film');
@@ -142,6 +146,7 @@
   viewBannerBgLi.eq(0).addClass('active');
 
   var ViewBannerTextFn = function(n,k){
+    n===-1? $('.n_count').text('8'):$('.n_count').text(n+1);
 
     if(n<0){
       viewBannerH3.text(MainfilmList[7].title);
@@ -225,6 +230,25 @@
     indiTitleLi.removeClass('active');
   });
   
+  // mobile 숫자 count
+  $('.n_count').text(n+1);
+  $('.t_count').text(MainfilmList.length);
+
+  
+  // 자동 슬라이드 기능
+  var SetSlideInterval;
+  var mySlideGo = function(){
+    SetSlideInterval = setInterval(function(){
+      slideBtn.trigger('click');
+    }, timed*6);
+  }
+  var mySlideStop = function(){
+    clearInterval(SetSlideInterval);  
+  }
+
+  mySlideGo(); 
+  viewBox.on({mouseenter:mySlideStop,mouseleave:mySlideGo});
+
 
 
   // end

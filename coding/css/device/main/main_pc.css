@@ -4,10 +4,24 @@
 
   .area_full{max-width: 1100px;}
   /* #viewBox */
+  #viewBox{
+    height: 720px;
+    /* 720/1440*100 */
+    height: 50vw;
+    max-height: 930px;
+  }
 
   /* #filmBox */
   .film_area{max-width: 1100px;}
   .film_list li{width: 20%; height: 380px;}
+
+  /* #videoBox */
+  #videoBox{
+    height: 450px;
+    /* 450/1440*100 */
+    height: 31.25vw;
+    max-height: 570px;
+  }
 
 
   /* @media end */

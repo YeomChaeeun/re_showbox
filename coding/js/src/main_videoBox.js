@@ -65,7 +65,8 @@
   var winH = win.height();
   var videoH = videoBox.outerHeight();
   var videoOffset = videoBox.offset().top;
-  console.log(videoOffset);
+  var videoPositionY = videoBox.find('.movie_play').css('background-position');
+  console.log(videoPositionY);
 
 
   win.on('scroll',function(e){
@@ -74,7 +75,10 @@
     var winTop2 = winTop + winH;
     if(winTop2>videoOffset && winTop2<=videoOffset+videoH){
       // console.log('!!!!!!! ------------------------1'+(videoOffset-winTop2)/20);
-      MoviePlayThum.css({backgroundPositionY: (videoOffset-winTop2)/20*10+'px'});
+      var pY = -(videoOffset-winTop2)/20*3;
+      // console.log(pY);
+      if(pY>=60){pY=60;}
+      MoviePlayThum.css({backgroundPositionY: pY+'%'});
     }
   });
 

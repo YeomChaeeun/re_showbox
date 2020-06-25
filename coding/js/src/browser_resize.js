@@ -1,10 +1,11 @@
 // browser_resize.js
+var deviceName, deviceWidth;
 
 (function($){
   // resize -------------------------------------------------------
 
-  var deviceName = ['mobile','tablet','laptop','pcfull'];
-  var deviceWidth = [
+  deviceName = ['mobile','tablet','laptop','pcfull'];
+  deviceWidth = [
     {'size' : 640, "title" : deviceName[0]},
     {'size' : 1024, "title" : deviceName[1]},
     {'size' : 1440, "title" : deviceName[2]},

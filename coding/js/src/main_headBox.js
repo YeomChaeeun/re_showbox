@@ -26,28 +26,27 @@
     {title: 'showbox movie', link:'film.html',  // gnbArr[0].title
      subList : [  // gnbArr[0].subList  
      // gnbArr[0].subList[0].linkName , gnbArr[0].subList[0].link
-       {linkName : '쇼박스 라인업', link : 'storyMonfee.html'}, 
-     // gnbArr[0].subList[1].linkName , gnbArr[0].subList[1].link
-     {linkName : '현재상영작', link : 'aboutCompany.html' }
+       {linkName : '쇼박스 라인업', link : 'lineUp.html'}, 
+     {linkName : '현재상영작', link : 'onScreen.html' }
     ]},
     {title: 'company', link:'about.html',  //gnbArr[1].title
      subList : [     // gnbArr[1].subList
        {linkName : '(주)쇼박스소개', link : 'aboutCompany.html' },
-       {linkName : '사업영역',  link : 'sponCompany.html'},
-       {linkName : '회사연혁',  link : 'sponCompany.html'},
-       {linkName : '윤리경영',  link : 'sponCompany.html'},
-       {linkName : '오시는길',  link : 'sponCompany.html'}
+       {linkName : '사업영역',  link : 'business.html'},
+       {linkName : '회사연혁',  link : 'history.html'},
+       {linkName : '윤리경영',  link : 'management.html'},
+       {linkName : '오시는길',  link : 'location.html'}
     ]},
     {title: 'ir', link:'ir.html',  // gnbArr[2].title
      subList : [
-       {linkName : '공시정보', link : 'storyMonfee.html'},
-       {linkName : '요약재무정보', link : 'aboutCompany.html' },
-       {linkName : 'ir 뉴스',  link : 'sponCompany.html'},
-       {linkName : '내부정보관리규정',  link : 'sponCompany.html'}
+       {linkName : '공시정보', link : 'ir.html'},
+       {linkName : '요약재무정보', link : 'financial.html' },
+       {linkName : 'ir 뉴스',  link : 'irNews.html'},
+       {linkName : '내부정보관리규정',  link : 'rule.html'}
     ]},
     {title: 'recruit', link:'recruit.html',
      subList : [
-       {linkName : '채용사이트', link : 'storyMonfee.html'}
+       {linkName : '채용사이트', link : 'recruit.html'}
     ]}
    ];
   // ----------------------------
@@ -106,7 +105,7 @@
   var navSlideMenu = navSlideArea.find('.nav_slide_m');
   var gnbClone = gnbArea.children('li').clone();
   var snsText = '<div class="sns_part">\
-      <div><a href="#"><span class="hidden">facebook</span></a></div>\
+      <div><a href="https://www.facebook.com/Showbox.Movie"><span class="hidden">facebook</span></a></div>\
       <div><a href="#"><i class="fas fa-envelope"></i><span class="hidden">email address</span></a></div>\
     </div>';
   
@@ -166,10 +165,19 @@
 
   // scrooll 내려갈때 headBox 숨겼다가 올라갈때 나타나게 함
   var mouseOk = true;
+  var winScroll=win.scrollTop();
+  // console.log(winScroll);
+
   $(document).on('mousewheel DOMMouseScroll',function(e){
     // console.log(e.type);
     // console.log(e.originalEvent.wheelDelta);
     // console.log(e.originalEvent.detail);
+
+    // var thisScrollTop = win.scrollTop();
+    // console.log(thisScrollTop);
+    // if(winScroll==thisScrollTop){
+    //   headBoxWrap.hide();
+    // }
     if(mouseOk){
       mouseOk=false;
       var evt = e.originalEvent;
@@ -180,7 +188,7 @@
         mouseResult = evt.detail*40;
       }
     }
-    console.log(mouseResult);
+    // console.log(mouseResult);
     // -----------------------------------------------------
 
     if(mouseResult<0){
