@@ -209,18 +209,23 @@
 
   // top ------------------------------------------------------------
 
-  // var topMvBtn = $('.top_btn_area');
+  var topMvText = '<div class="top_move_btn"><a href="#"><span class="hidden">상단으로 이동</span></a></div>';
+  $('#footBox').before(topMvText);
 
-  // topMvBtn.hide();
-  // $(window).on('scroll', function(){
-  //   var winScroll = $(window).scrollTop();
-  //   (winScroll>=300)? topMvBtn.stop().fadeIn(300) : topMvBtn.stop().fadeOut(300);
-  // });
+  var topMvBtn = $('.top_move_btn');
+  topMvBtn.css({position:'fixed',right:'3%',bottom:'5rem',marginLeft:'3rem',zIndex:'1000',width:'20px',height:'100px',backgroundColor:'#fff'});
+  topMvBtn.find('a').css({display:'block',width:'100%',height:'100%'});
 
-  // topMvBtn.on('click',['a'],function(e){
-  //   $('html, body').animate({scrollTop:0},300);
-  // });
+  $(window).on('scroll', function(){
+    var winScroll = $(window).scrollTop();
+    (winScroll>=500)? topMvBtn.stop().fadeIn() : topMvBtn.stop().fadeOut();
+    // if(winScroll>=1000){topMvBtn.stop().fadeIn();}
+    // else{topMvBtn.stop().fadeOut();}
+  });
 
+  topMvBtn.on('click',['a'],function(e){
+    $('html, body').animate({scrollTop:0},300);
+  });
   
   // end
 })(jQuery);

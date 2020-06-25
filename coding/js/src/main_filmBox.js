@@ -1,11 +1,12 @@
 // main_filmBox.js
+var filmList;
 
 (function($){
   // start
   var win = $(window);
   var winW = win.width();
 
-  var filmList = [
+  filmList = [
     {no: '1', img:'movie_01.png', Pcimg:'movie_01.jpg', link: 'movie_01_info.html', imgNarr : '영화 01', title: '국제수사',  date: '2020', content: 'lorem ...', },
     {no: '2', img:'movie_02.png', Pcimg:'movie_02.jpg', link: 'movie_02_info.html', imgNarr : '영화 02', title: '남산의 부장들', date: '2020.01.22', content: 'lorem ...', },
     {no: '3', img:'movie_03.png', Pcimg:'movie_03.jpg', link: 'movie_03_info.html', imgNarr : '영화 03', title: '퍼펙트 맨', date: '2019.10.02', content: 'lorem ...', },

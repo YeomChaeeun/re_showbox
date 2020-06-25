@@ -5,9 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
 
-  <link rel="stylesheet" href="../fonts/myFont/fonts.css">
+  <link rel="stylesheet" href="../fonts/fontawesome-5/css/all.css">
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/base/common.css">
+
+  <link rel="stylesheet" href="../css/device/common/showBoxHeadBox.css">
+  <link rel="stylesheet" href="../css/device/common/showBoxFootBox.css">
+
   <link rel="stylesheet" href="../css/src/onScreen.css">
 
   <!--[if IE]>
@@ -20,12 +24,58 @@
 <body>
   <!-- layout -->
   <div id="wrap">
-    onScreen
+    <!-- #headBox -->
+    <header id="headBox">
+      <h1 class="full hidden_wrap"><a href="./main.html"><span>logo</span></a></h1>
+      <nav id="gnbBox">
+        <h2 class="hidden">전체 메뉴 네비게이션</h2>
+        <!-- <ul class="gnb_area"></ul> -->
+      </nav>
+      
+      <div class="lang_area">
+        <ul class="full">
+          <li><a href="./main.html">ko</a></li>
+          <li><a href="./main.html">en</a></li>
+        </ul>
+      </div>
+
+      <div class="pull"> 
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+      <div class="nav_slide">
+        <ul class="nav_slide_m">
+          <!-- js에서 작성함 -->
+        </ul>
+      </div>
+    </header>
+    <!-- // #headBox -->
+
+    <section id="titleBox">
+      <h2>on screen</h2>
+      <div class="title_img">
+
+      </div>
+    </section>
+    <article id="screenBox">
+
+    </article>
+
+    <!-- #footBox -->
+    <footer id="footBox">
+      <h2 class="hidden">회사 관련 정보 및 패밀리 사이트 영역</h2>
+
+    </footer>
+    <!-- // #footBox -->
   </div>
   
   <!-- script -->
   <script src="../js/base/jquery-3.5.1.min.js"></script>
   <script src="../js/base/jquery-ui.min.js"></script>
+  <script src="../js/src/browser_resize.js"></script>
+  <script src="../js/src/main_headBox.js"></script>
+  <script src="../js/src/main_footBox.js"></script>
   <script src="../js/src/onScreen.js"></script>
   
 </body>

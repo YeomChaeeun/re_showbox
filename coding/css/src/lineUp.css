@@ -1,5 +1,9 @@
 /* lineUp.css */
-#wrap {
-  width: 100%;
-  height: auto;
-}
+
+
+@import url("../device/lineUp/lineUp_base.css");
+@import url("../device/lineUp/lineUp_mob.css");
+@import url("../device/lineUp/lineUp_tab.css");
+@import url("../device/lineUp/lineUp_laptop.css");
+@import url("../device/lineUp/lineUp_pc.css");
+@import url("../device/lineUp/lineUp_pcfull.css");

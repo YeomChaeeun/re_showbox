@@ -1,0 +1,9 @@
+/* aboutCompany.css */
+
+
+@import url("../device/about/about_base.css");
+@import url("../device/about/about_mob.css");
+@import url("../device/about/about_tab.css");
+@import url("../device/about/about_laptop.css");
+@import url("../device/about/about_pc.css");
+@import url("../device/about/about_pcfull.css");

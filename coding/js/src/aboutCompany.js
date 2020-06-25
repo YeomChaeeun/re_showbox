@@ -1,0 +1,7 @@
+// aboutCompany.js
+
+(function($){
+
+
+  
+})(jQuery);
