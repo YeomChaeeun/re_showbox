@@ -1,0 +1,77 @@
+/* filmPage.css */
+/* color.css */
+#wrap {
+  width: 100%;
+  height: auto;
+}
+
+#titleBox {
+  width: 100%;
+  height: 400px;
+  background-color: #ddd;
+}
+#titleBox > h2 {
+  width: 100%;
+  height: 50px;
+  padding-top: 150px;
+  box-sizing: border-box;
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#titleBox > .title_img {
+  width: 100%;
+  height: 100%;
+}
+
+#detailBox {
+  width: 100%;
+  height: auto;
+  min-height: 800px;
+  background-color: #fdfdfd;
+  padding: 5rem 1rem;
+  box-sizing: border-box;
+}
+#detailBox > .detail_area {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  #detailBox > .detail_area {
+    max-width: 580px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #detailBox > .detail_area {
+    max-width: 900px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  #detailBox > .detail_area {
+    max-width: 1100px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #detailBox > .detail_area {
+    max-width: 1300px;
+  }
+}
+
+.film_info {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  background-color: #333;
+}
+.film_info > .poster_img {
+  width: 100px;
+  height: 120px;
+}
+
+.film_video {
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+  background-color: #fa0;
+}

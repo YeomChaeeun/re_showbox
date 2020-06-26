@@ -9,7 +9,8 @@
   var filmArea = lineUpBox.find('.film_area');
   filmArea.append('<ul class="film_list clearfix"></ul>');
   var filmAreaUl = filmArea.find('.film_list');
-  console.log(filmAreaUl);
+  var filmLi = filmAreaUl.find('li');
+
   var textEl = function(i){
     var	listEl = '<li>\
             <a href="#">\
@@ -32,9 +33,23 @@
       backgroundSize:'contain'
     })
   }
-
   
+  filmLi = filmAreaUl.find('li');
 
+  filmLi.find('a').on('click',function(e){
+    e.preventDefault();
+    var thisLi = $(this).parent('li');
+    var thisIndex = thisLi.index();
+    
+    // console.log(thisIndex);
+    var filmIndex = filmList[thisIndex].no;
+    var filmTitle = filmList[thisIndex].title;
+    // console.log(filmTitle);
+
+    var tlSt = 'filmIndex='+filmIndex+'_&&filmTitle='+filmTitle;
+    location='./filmPage.html?'+tlSt;
+  });
+  
 
 
 

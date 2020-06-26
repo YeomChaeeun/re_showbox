@@ -9,7 +9,9 @@
   .film_area{max-width: 580px;}
   .film_list li{width: 33.333333%; height: 379px;}
 
-
+  /* #photoBox */
+  .photo_list{width: 400%;}
+  .photo_list li{width: 12.5%;}
 
 
   /* @media end */

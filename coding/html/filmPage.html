@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="../css/device/common/showBoxHeadBox.css">
   <link rel="stylesheet" href="../css/device/common/showBoxFootBox.css">
 
-  <link rel="stylesheet" href="../css/src/onScreen.css">
+  <link rel="stylesheet" href="../css/src/filmPage.css">
 
   <!--[if IE]>
     <meta src="../ie/html5shiv/dist/html5shive.min.js">
@@ -24,7 +24,6 @@
 <body>
   <!-- layout -->
   <div id="wrap">
-    <!-- #headBox -->
     <header id="headBox">
       <h1 class="full hidden_wrap"><a href="./main.html"><span>logo</span></a></h1>
       <nav id="gnbBox">
@@ -34,8 +33,8 @@
       
       <div class="lang_area">
         <ul class="full">
-          <li><a href="./onScreen.html">ko</a></li>
-          <li><a href="./onScreen.html">en</a></li>
+          <li><a href="./filmPage.html">ko</a></li>
+          <li><a href="./filmPage.html">en</a></li>
         </ul>
       </div>
 
@@ -51,15 +50,27 @@
       </div>
     </header>
     <!-- // #headBox -->
-
+    
+    <!-- #titleBox -->
     <section id="titleBox">
-      <h2>on screen</h2>
+      <h2>showbox</h2>
       <div class="title_img">
 
       </div>
     </section>
-    <article id="screenBox">
 
+    <!-- #detailBox -->
+    <article id="detailBox">
+      <h2 class="hidden">영화 상세 정보</h2>
+      <div class="detail_area">
+        <div class="film_info">
+          <div class="poster_img"></div>
+        </div>
+        <div class="film_video">
+
+        </div>
+        
+      </div>
     </article>
 
     <!-- #footBox -->
@@ -69,6 +80,9 @@
     </footer>
     <!-- // #footBox -->
   </div>
+
+
+
   
   <!-- script -->
   <script src="../js/base/jquery-3.5.1.min.js"></script>
@@ -76,7 +90,8 @@
   <script src="../js/src/browser_resize.js"></script>
   <script src="../js/src/main_headBox.js"></script>
   <script src="../js/src/main_footBox.js"></script>
-  <script src="../js/src/onScreen.js"></script>
+  <script src="../js/src/main_filmBox.js"></script>
+  <script src="../js/src/filmPage.js"></script>
   
 </body>
 </html>

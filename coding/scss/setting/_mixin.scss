@@ -53,31 +53,36 @@ $url : '../../img/main/';
 
 $deviceWidth:(
   mob : 640,
-  tab : 1204,
-  laptop : 1400,
+  tab : 1024,
+  laptop : 1440,
   pcFull : 1920
 );
 
 @mixin Mob(){
-  @media screen and (max-width:map-get($deviceWidth, mob)+px){
+  @media screen and (max-width:map-get($deviceWidth, mob)-1+px){
     @content;  
   }
 }
 
 @mixin Tab(){
-  @media screen and (min-width:map-get($deviceWidth, mob)+1+px) and (max-width:map-get($deviceWidth, tab)+px){
+  @media screen and (min-width:map-get($deviceWidth, mob)+px) and (max-width:map-get($deviceWidth, tab)-1+px){
     @content;  
   }
 }
 
 @mixin laptop(){
-  @media screen and (min-width:map-get($deviceWidth, tab)+1+px) and (max-width:map-get($deviceWidth, laptop)+px){
+  @media screen and (min-width:map-get($deviceWidth, tab)+px) and (max-width:map-get($deviceWidth, laptop)-1+px){
     @content;  
   }
 }
 
+@mixin Pc(){
+  @media screen and (min-width:map-get($deviceWidth, laptop)+px) and (max-width:map-get($deviceWidth, pcFull)-1+px){
+    @content;  
+  }
+}
 @mixin PcFull(){
-  @media screen and (min-width:map-get($deviceWidth, laptop)+1+px){
+  @media screen and (min-width:map-get($deviceWidth, pcFull)+px){
     @content;  
   }
 }
