@@ -83,7 +83,7 @@ var filmList;
     slideBtn.on('click',function(e){
       e.preventDefault();
       var clickIt = $(this)[0];
-      k = n;
+      
       if(clickIt == $('.next')[1]){
         // 다음 버튼 클릭
         btnOk = false;
@@ -111,13 +111,23 @@ var filmList;
     });
   }
 
-  //
-
   filmLi.find('a').on('click',function(e){
     e.preventDefault();
     var thisLi = $(this).parent('li');
     var thisIndex = thisLi.index();
-    
+    filmajax(thisIndex);
+  });
+
+  // film 선택시 인덱스 값 전달 함 
+  var filmajax = function(n){
+    var thisIndex = n;
+    if(winW<640){
+      if(thisIndex==1){
+        thisIndex = FileList.length -1;
+      }else{
+        thisIndex = thisIndex -1;
+      }
+    }
     // console.log(thisIndex);
     var filmIndex = filmList[thisIndex].no;
     var filmTitle = filmList[thisIndex].title;
@@ -125,8 +135,7 @@ var filmList;
 
     var tlSt = 'filmIndex='+filmIndex+'_&&filmTitle='+filmTitle;
     location='./filmPage.html?'+tlSt;
-  });
-  
+  }
 
   if(winW<640){
     mobFilm();
