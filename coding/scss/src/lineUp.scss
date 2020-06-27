@@ -1,6 +1,9 @@
 // lineUp.scss
 /* lineUp.css */
 
+@import "../setting/color";
+@import "../setting/mixin";
+
 #wrap{
   width: 100%; height: auto;
 }

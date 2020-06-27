@@ -1,6 +1,9 @@
 // onScreen.scss
 /* onScreen.css */
 
+@import "../setting/color";
+@import "../setting/mixin";
+
 #wrap {
   width: 100%;
   height: auto;
