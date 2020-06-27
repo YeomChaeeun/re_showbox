@@ -1,9 +1,4 @@
 /* onScreen.css */
-
-@import url("../device/onScreen/onScreen_base.css");
-@import url("../device/onScreen/onScreen_mob.css");
-@import url("../device/onScreen/onScreen_tab.css");
-@import url("../device/onScreen/onScreen_laptop.css");
-@import url("../device/onScreen/onScreen_pc.css");
-@import url("../device/onScreen/onScreen_pcfull.css");
-
+#wrap {
+  width: 100%;
+  height: auto; }

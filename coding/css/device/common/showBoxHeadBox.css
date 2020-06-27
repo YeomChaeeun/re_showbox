@@ -54,8 +54,8 @@ h1{float:left; width: 200px; height: 100%;
 .gnb_area dt:before { left: 0; }
 .gnb_area dt:after { right: 0; }
 
-.gnb_area dt:hover:before, .gnb_area dt:hover:after,
-.gnb_area dt:focus:before, .gnb_area dt:focus:after {
+.gnb_area dt.active:before, .gnb_area dt.active:after,
+.gnb_area dt.active:before, .gnb_area dt.active:after {
   width: 50%;
 }
 

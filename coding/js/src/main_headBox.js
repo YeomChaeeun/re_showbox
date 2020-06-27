@@ -90,11 +90,14 @@
     gnbArea.find('dt').on('mouseenter', function(){
       var thisDt = $(this);
       var thisDd = thisDt.next('dd');
+      gnbArea.find('dt').removeClass('active');
+      thisDt.addClass('active');
       gnbArea.find('dd').hide();
       thisDd.show();
     });
   
     headBox.on('mouseleave', function(){
+      gnbArea.find('dt').removeClass('active');
       gnbArea.find('dd').hide();
     });
   };
