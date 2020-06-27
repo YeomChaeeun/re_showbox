@@ -65,11 +65,12 @@
   PhotoFrameUl.css({position:'relative'});
 
   photoBtnArea.children('.prev').hide();
-  var btnView = function(){
+  var btnView = function(mvNum){
+    if(winW>1024){mvNum=3};
     if(n<=0){
       photoBtnArea.children('.prev').hide();
       photoBtnArea.children('.next').show();
-    }else if(n>=2){
+    }else if(n>=mvNum-1){
       photoBtnArea.children('.prev').show();
       photoBtnArea.children('.next').hide();
     }
@@ -81,10 +82,12 @@
 
   var photoSize = function(n,l){
     mvLength = l;
+    mvNum = PhotoFrameLi.length/l;
+    console.log(mvNum);
     phoFirstSize = PhotoFrameLi.eq(1).outerWidth(true)*mvLength;
     PhotoFrameUl.animate({left:-n*phoFirstSize+'px'}, function(){
       // materialBtn.show();
-      btnView();
+      btnView(mvNum);
     });
   }
   photoBtn.on('click',function(e){

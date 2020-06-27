@@ -10,8 +10,11 @@
   .film_list li{width: 33.333333%; height: 379px;}
 
   /* #photoBox */
+  .photo_frame{
+    padding-left: 2%;
+  }
   .photo_list{width: 400%;}
-  .photo_list li{width: 12.5%;}
+  /* .photo_list li{width: 12.5%;} */
 
 
   /* @media end */

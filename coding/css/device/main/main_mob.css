@@ -42,8 +42,11 @@
   }
 
   
+  .photo_frame{
+    padding-left: 3%;
+  }
   .photo_list{width: 800%;}
-  .photo_list li{width: 12.5%;}
+  /* .photo_list li{width: 12.5%;} */
 
   #aboutBox{height: 600px;}
   .about_img{width: 100%;}
