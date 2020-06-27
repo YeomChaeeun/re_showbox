@@ -17,7 +17,7 @@
             <div class="big_movie">\
               <div class="video_info"><span class="hidden">'+videoInfo.videoNarr+'</span></div>\
               <video controls loop muted>\
-                <source  src="../media/video/video_01.webm" type="video/webm" />\
+                <!--<source  src="../media/video/video_01.webm" type="video/webm"/>-->\
                 <source  src="' + videoInfo.mp4 + '"type="video/mp4" />\
                 <p>사용하고 계신 브라우저는 멀티미디어 호환이 되지 않으니 <a href="http://google.com/chrome">최신브라우저</a>를 설치하여 사용하세요.</p>      \
               </video>\

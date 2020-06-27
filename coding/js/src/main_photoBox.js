@@ -33,7 +33,7 @@
   var textEl = function(i){
     var	listEl = '<li>\
             <a href="#">\
-              <div class="img_bg"><span>'+ photoList[i].imgNarr +'</span></div>\
+              <div class="img_bg"><span class="hidden">'+ photoList[i].imgNarr +'</span></div>\
             </a>\
             </li>';
     return listEl;

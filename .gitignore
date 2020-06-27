@@ -3,6 +3,6 @@
 # ! : 제외
 
 # **/media/youtube/
-**/media/
+#**/media/
 
 

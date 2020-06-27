@@ -2,3 +2,28 @@
 #wrap {
   width: 100%;
   height: auto; }
+
+#titleBox {
+  width: 100%;
+  height: 400px;
+  background-color: #ddd; }
+
+#titleBox h2 {
+  width: 100%;
+  height: 50px;
+  padding-top: 150px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.title_img {
+  width: 100%;
+  height: 100%; }
+
+#screenBox {
+  width: 100%;
+  height: auto;
+  min-height: 900px;
+  background-color: #999; }
