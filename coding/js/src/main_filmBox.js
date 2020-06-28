@@ -152,7 +152,7 @@ var filmList;
     clearInterval(SetSlideInterval);  
   }
 
-  // mySlideGo(); 
+  mySlideGo(); 
   filmBox.on({mouseenter:mySlideStop,mouseleave:mySlideGo});
 
   // end

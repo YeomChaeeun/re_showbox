@@ -51,11 +51,12 @@
   }
 }
 
+// #conBox
 #conBox{
   position: relative;
-  width: 100%; height: auto; min-height: 1500px;
-  padding-top: 200px; box-sizing: border-box;
-  background-image: linear-gradient(nth($natural,1),nth($natural,3));
+  width: 100%; height: auto; min-height: 800px;
+  padding-top: 150px; box-sizing: border-box;
+  background-image: linear-gradient(nth($natural,3),nth($natural,1));
   &:after{
     content: "";
     display: block; clear: both;
@@ -65,7 +66,7 @@
 .title_bg{
   position: absolute;
   top: 400px;
-  width: 60%; min-width: 400px; max-width: 800px;
+  width: 60%; min-width: 400px; max-width: 1700px;
   height: 90px;
   margin-left: 5%;
   background-color: nth($colorList,1);
@@ -79,17 +80,56 @@
     text-transform: uppercase;
   }
 }
-
+.con_text{
+  position: absolute;
+  top: 600px;
+  width: 70%; height: auto;
+  padding: 60px; box-sizing: border-box; 
+  // background-color: #ba9;
+  >p{
+    width: 100%; height: auto;
+    color: #fdfdfd;
+    font-size: 1.5rem;
+  }
+}
 .con_img_bg{
   float: right;
-  width: 50%; height: 500px;
+  width: 45%; height: 700px;
   // padding: 200px; box-sizing: border-box; 
   // // background-color: #ba9;
+  >.con_img{
+    width: 100%; height: 100%;
+    background-image: url('../../img/showbox/bg-pattern.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto 100%;
+  }
 }
-.con_img{
+
+#shortHistory{
+  width: 100%; height: auto; min-height: 800px;
+  background-color: #060c08;
+}
+.his_area{
   width: 100%; height: 100%;
-  background-image: url('../../img/showbox/bg-pattern.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size:  100% auto; 
+  >ul{
+
+  }
+  li{
+    width: 100%; height: 400px;
+    div{width: 50%; height: 100%;}
+    &:nth-child(2n+1){
+      >.img{float:left;  background-color: #fcc;}
+      >.text{float: right; background-color: #cfc;}
+    }
+    &:nth-child(2n){
+      >.img{float:right; background-color: #fcc;}
+      >.text{float: left; background-color: #cfc;}
+    }
+  }
+}
+
+#conBox02{
+  width: 100%; height: auto; min-height: 600px;
+  background-color: #060c08;
 }

@@ -59,14 +59,14 @@
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 1500px;
-  padding-top: 200px;
+  min-height: 800px;
+  padding-top: 150px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#060C08), to(#666));
-  background-image: -webkit-linear-gradient(#060C08, #666);
-  background-image: -o-linear-gradient(#060C08, #666);
-  background-image: linear-gradient(#060C08, #666); }
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#666), to(#060C08));
+  background-image: -webkit-linear-gradient(#666, #060C08);
+  background-image: -o-linear-gradient(#666, #060C08);
+  background-image: linear-gradient(#666, #060C08); }
   #conBox:after {
     content: "";
     display: block;
@@ -77,7 +77,7 @@
   top: 400px;
   width: 60%;
   min-width: 400px;
-  max-width: 800px;
+  max-width: 1700px;
   height: 90px;
   margin-left: 5%;
   background-color: #f93; }
@@ -92,15 +92,62 @@
     margin-left: 50%;
     text-transform: uppercase; }
 
+.con_text {
+  position: absolute;
+  top: 600px;
+  width: 70%;
+  height: auto;
+  padding: 60px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .con_text > p {
+    width: 100%;
+    height: auto;
+    color: #fdfdfd;
+    font-size: 1.5rem; }
+
 .con_img_bg {
   float: right;
-  width: 50%;
-  height: 500px; }
+  width: 45%;
+  height: 700px; }
+  .con_img_bg > .con_img {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/showbox/bg-pattern.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto 100%; }
 
-.con_img {
+#shortHistory {
   width: 100%;
-  height: 100%;
-  background-image: url("../../img/showbox/bg-pattern.png");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: 100% auto; }
+  height: auto;
+  min-height: 800px;
+  background-color: #060c08; }
+
+.his_area {
+  width: 100%;
+  height: 100%; }
+  .his_area li {
+    width: 100%;
+    height: 400px; }
+    .his_area li div {
+      width: 50%;
+      height: 100%; }
+    .his_area li:nth-child(2n+1) > .img {
+      float: left;
+      background-color: #fcc; }
+    .his_area li:nth-child(2n+1) > .text {
+      float: right;
+      background-color: #cfc; }
+    .his_area li:nth-child(2n) > .img {
+      float: right;
+      background-color: #fcc; }
+    .his_area li:nth-child(2n) > .text {
+      float: left;
+      background-color: #cfc; }
+
+#conBox02 {
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+  background-color: #060c08; }

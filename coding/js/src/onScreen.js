@@ -10,10 +10,9 @@
   var preview = movieArea.find('.preview');
   var movie01 = preview.find('.movie_01');
   var movie02 = preview.find('.movie_02');
-  console.log(movie01);
+  // console.log(movie01);
 
-  movie01.show();
-  
+  movie01.show();  
   tabLi.eq(0).addClass('active');
 
   tabBtn.on('click',function(e){
@@ -40,7 +39,7 @@
   
   $(document).on('scroll', function(){
     var doScroll = $(document).scrollTop();
-    viewBoxH2.css({'marginTop':-doScroll/2+'px'});
+    viewBoxH2.css({'marginTop':-doScroll/4+'px'});
     viewImage.css({'marginTop':doScroll*1.2+'px'});
   });
 
