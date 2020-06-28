@@ -1,55 +1,58 @@
 // lineUp.js
 
 (function($){
+  // tab menu 구현
   
-  var imgUrl ='../img/movie_poster/';
-  var LineUpList = filmList;
+  var filmBox = $('#filmBox');
+  var filmArea = filmBox.find('.film_area');
+  var filmUl = filmArea.find('ul');
+  var filmLi = filmUl.find('li');
+  var filmLiLen = filmLi.length;
+  var filmTag;
 
-  var lineUpBox = $('#lineUpBox');
-  var filmArea = lineUpBox.find('.film_area');
-  filmArea.append('<ul class="film_list clearfix"></ul>');
-  var filmAreaUl = filmArea.find('.film_list');
-  var filmLi = filmAreaUl.find('li');
-
-  var textEl = function(i){
-    var	listEl = '<li>\
-            <a href="#">\
-              <div class="img_bg"><span class="hidden">'+ LineUpList[i].imgNarr +'</span></div>\
-              <dl><dt>'+ LineUpList[i].title +'</dt>\
-                <dd>'+ LineUpList[i].date +'</dd>\
-              </dl>\
-            </a>\
-            </li>';
-    return listEl;
-  };
-
-  var i=0;
-  for(; i<LineUpList.length; i++){	
-    filmAreaUl.append( textEl(i) );
-    filmAreaUl.children('li').eq(i).find('.img_bg').css({
-      backgroundImage:'url('+ imgUrl + LineUpList[i].Pcimg +')',
-      backgroundRepeat:'no-repeat',
-      backgroundPosition:'50% 50%',
-      backgroundSize:'contain'
-    })
+  var tabArea = $('.tab_area');
+  var tabUl = tabArea.children('ul');
+  var tabLi = tabUl.find('li');
+  filmLi.show();
+  var filmFn = function(showTag){
+    filmLi.hide();
+    for(var i=0; i<filmLiLen;i++){
+      filmTag = filmLi.eq(i).find('dl').find('span').text();
+      if(filmTag==showTag){
+        filmLi.eq(i).show();
+      }
+    }
+    if(showTag==3){
+      filmLi.show();
+    }
   }
-  
-  filmLi = filmAreaUl.find('li');
 
-  filmLi.find('a').on('click',function(e){
+  tabLi.find('a').on('click',function(e){
     e.preventDefault();
     var thisLi = $(this).parent('li');
     var thisIndex = thisLi.index();
-    
     // console.log(thisIndex);
-    var filmIndex = filmList[thisIndex].no;
-    var filmTitle = filmList[thisIndex].title;
-    // console.log(filmTitle);
 
-    var tlSt = 'filmIndex='+filmIndex+'_&&filmTitle='+filmTitle;
-    location='./filmPage.html?'+tlSt;
-  });
-  
+    var showTag;
+    switch(thisIndex){
+      case 1 :
+        showTag = 1;
+        break;
+      case 2 :
+        showTag = 2;
+        break;
+      case 3 :
+        showTag = 0;
+        break;
+      default :
+        showTag=3;
+    }
+    filmFn(showTag);
+
+  })
+
+
+
 
 
 

@@ -52,15 +52,18 @@
     </header>
     <!-- // #headBox -->
     
+    <!-- #titleBox -->
     <section id="titleBox">
       <h2>moives</h2>
       <div class="title_img">
 
       </div>
     </section>
+    
+    <!-- #searchBox -->
     <article id="searchBox">
       <h2 class="hidden">페이지 내 검색 영역</h2>
-      <div class="search_area">
+      <div class="search_area area_full">
         <fieldset>
           <legend class="hidden">search</legend>
           <input type="text" id="searchArea" name="search" value placeholder="검색어를 입력하세요.">
@@ -71,8 +74,11 @@
         </fieldset>
       </div>
     </article>
-    <article id="lineUpBox">
-      <div class="lineup_area">
+
+    <!-- #filmBox -->
+    <article id="filmBox">
+      <h2 class="hidden">영화 리스트</h2>
+      <div class="lineup_area area_full">
         <div class="tab_area">
           <ul class="tab_list clearfix">
             <li><a href="#">all</a></li>
@@ -83,6 +89,10 @@
           </ul>
         </div>
         <div class="film_area">
+          <div class="slide_btn">
+            <button type="button" class="next"><i class="fas fa-chevron-right"></i><span class="hidden">next</span></button>
+            <button type="button" class="prev"><i class="fas fa-chevron-left"></i><span class="hidden">prev</span></button>
+          </div>
           <!-- <ul class="film_list clearfix">
             <li><a href="#"></a></li>
           </ul> -->

@@ -15,7 +15,7 @@ var filmList;
       return filmList;
     }    
   });
-  console.log(filmList);
+  // console.log(filmList);
 
   // filmList = [
   //   {no: '1', img:'movie_01.png', Pcimg:'movie_01.jpg', link: 'movie_01_info.html', imgNarr : '영화 01', title: '국제수사',  date: '2020', content: 'lorem ...', },
@@ -41,6 +41,7 @@ var filmList;
               <div class="img_bg"><span class="hidden">'+ filmList[i].imgNarr +'</span></div>\
               <dl><dt>'+ filmList[i].title +'</dt>\
                 <dd>'+ filmList[i].date +'</dd>\
+                <dd><span class="hidden">'+ filmList[i].tag +'</span></dd>\
               </dl>\
             </a>\
             </li>';
@@ -63,16 +64,16 @@ var filmList;
   var slideBtn = filmBox.find('.slide_btn').find('button');
 
   var n=0;
-  var k;
   var btnOk = true;
   var timed = 600;
+  var filmLiLen;
 
   var mobFilm = function(){    
     var liLast = filmLi.eq(-1).clone(true);
     filmUl.prepend(liLast);
 
     filmLi = filmUl.find('li');
-    var filmLiLen = filmLi.length;
+    filmLiLen = filmLi.length;
     // console.log(filmLiLen);
     var liWidth = 100/filmLiLen;
     filmUl.css({width:filmLiLen*100+'%',transform:'translateX(-' + liWidth + '%)'});
@@ -83,8 +84,8 @@ var filmList;
     slideBtn.on('click',function(e){
       e.preventDefault();
       var clickIt = $(this)[0];
-      
-      if(clickIt == $('.next')[1]){
+      console.log(clickIt);
+      if(clickIt == filmBox.find('.next')[0]){
         // 다음 버튼 클릭
         btnOk = false;
         n+=1;
@@ -122,13 +123,12 @@ var filmList;
   var filmajax = function(n){
     var thisIndex = n;
     if(winW<640){
-      if(thisIndex==1){
-        thisIndex = FileList.length -1;
-      }else{
-        thisIndex = thisIndex -1;
+      thisIndex = thisIndex-1;
+      if(thisIndex<0){
+        thisIndex = filmLiLen-1;
       }
     }
-    // console.log(thisIndex);
+    console.log(thisIndex);
     var filmIndex = filmList[thisIndex].no;
     var filmTitle = filmList[thisIndex].title;
     // console.log(filmTitle);
@@ -152,7 +152,7 @@ var filmList;
     clearInterval(SetSlideInterval);  
   }
 
-  mySlideGo(); 
+  // mySlideGo(); 
   filmBox.on({mouseenter:mySlideStop,mouseleave:mySlideGo});
 
   // end
