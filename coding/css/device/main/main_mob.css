@@ -48,9 +48,10 @@
   .photo_list{width: 800%;}
   /* .photo_list li{width: 12.5%;} */
 
-  #aboutBox{height: 600px;}
+  #aboutBox{height: 400px;}
   .about_img{width: 100%;}
   .about_info{width: 100%;}
+  .about_info p:last-child{display: none;}
 
   /* @media end */
 }

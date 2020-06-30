@@ -4,8 +4,8 @@
   // start
 
   var videoInfo = {
-    title:'title', 
-    content:'비디오 설명~~',
+    title:'남산의 부장들', 
+    content:'흔들린 충성, 그날의 총선',
     videoNarr:'lorem...', 
     mp4:'../media/video/2nd_movie_preview.mp4', 
     thum:'../img/movieBox/movie_thum.jpg'
