@@ -15,8 +15,9 @@
 }
 /* slide_btn */
 .slide_btn{position: absolute; top: 50%; left: 0; right: 0; z-index: 5;
-   width:96%; height:0; margin: auto; background-color: #f93; margin-top: -55px;}
-.slide_btn button{float:left; width: 30px; height: 50px; background-color: #fdfdfd;}
+   width:96%; height:0; margin: auto; background-color: #f93; margin-top: -35px;}
+.slide_btn button{float:left; width: 30px; height: 50px; font-size: 2rem; color: #fdfdfd; 
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.8);}
 .slide_btn .next{float: right;}
 
 /* indicator */
@@ -242,7 +243,9 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 #photoBox .btn_area>button{
   float: left;
   width: 20px; height: 30px;
-  background-color: #fff;
+  background-color: rgba(51, 51, 51, 0.5);
+  font-size: 1rem; color: #fdfdfd; 
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.3);
 }
 #photoBox .btn_area>button:first-child{float: right;}
 

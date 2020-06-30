@@ -56,7 +56,7 @@
 
   photoBtnArea.children('.prev').hide();
   var btnView = function(mvNum){
-    if(winW>1024){mvNum=3};
+    if(winW>=1024){mvNum=3};
     if(n<=0){
       photoBtnArea.children('.prev').hide();
       photoBtnArea.children('.next').show();
