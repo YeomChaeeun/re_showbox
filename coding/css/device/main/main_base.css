@@ -17,7 +17,7 @@
 .slide_btn{position: absolute; top: 50%; left: 0; right: 0; z-index: 5;
    width:96%; height:0; margin: auto; background-color: #f93; margin-top: -35px;}
 .slide_btn button{float:left; width: 30px; height: 50px; font-size: 2rem; color: #fdfdfd; 
-  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.8);}
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.8);}
 .slide_btn .next{float: right;}
 
 /* indicator */
