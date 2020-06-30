@@ -53,7 +53,7 @@
   hisLi.css({opacity:0});
 
 	
-	// dl의 offset값을 각각 파악
+	// li의 offset값을 각각 파악
 	var liOffset = []; 
 	for( var i=0; i < hisLi.length; i++ ){
 		liOffset[i] = hisLi.eq(i).offset().top;
@@ -64,17 +64,10 @@
 		var winScroll = $(this).scrollTop();
 		var winScrollPlus = winScroll + winHPart;
 		var op = 0;
-		// laptopSize 위치값파악하여 동작체크
-		// if(winScrollPlus >= laptopSizeOffset ){
-		// 	// console.log('laptopSizeOffset 스타트!!!');
-		// 	var op1 =	(winScrollPlus - laptopSizeOffset) / 400;
-		// 	// console.log( op1 );
-		// 	laptopSize.css({opacity: op1});
-		// }
 
-		// laptopSize 위치값파악 후 dl값의 위치에따라 투명도 처리
+		// shortHistory 위치값파악 후 li값의 위치에따라 투명도 처리
 		if(winScrollPlus >= shortHistoryOffset ){
-			// dl값을 각각 파악하여 매번 순환체크하도록 처리
+			// li값을 각각 파악하여 매번 순환체크하도록 처리
 			for(var i=0; i< hisLi.length; i++){
 				if( winScrollPlus  >= liOffset[i]){
 					op = (winScrollPlus - liOffset[i]) / 400;

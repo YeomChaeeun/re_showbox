@@ -55,11 +55,16 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
+.box_padding {
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 #conBox {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 800px;
+  min-height: 700px;
   padding-top: 150px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -127,27 +132,64 @@
 .his_area {
   width: 100%;
   height: 100%; }
+  .his_area > ul {
+    width: 100%;
+    height: auto; }
   .his_area li {
     width: 100%;
     height: 400px; }
     .his_area li div {
       width: 50%;
       height: 100%; }
+    .his_area li .img {
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%; }
+    .his_area li .text {
+      color: #fdfdfd;
+      text-align: center; }
+      .his_area li .text dl {
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateY(30%);
+        -ms-transform: translateY(30%);
+        transform: translateY(30%); }
+      .his_area li .text dt {
+        font-size: 2rem;
+        font-weight: bold; }
+      .his_area li .text dd {
+        padding: 0.5rem;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 1.5rem; }
     .his_area li:nth-child(2n+1) > .img {
-      float: left;
-      background-color: #fcc; }
+      float: left; }
     .his_area li:nth-child(2n+1) > .text {
-      float: right;
-      background-color: #cfc; }
+      float: right; }
     .his_area li:nth-child(2n) > .img {
-      float: right;
-      background-color: #fcc; }
+      float: right; }
     .his_area li:nth-child(2n) > .text {
-      float: left;
-      background-color: #cfc; }
+      float: left; }
+    .his_area li:nth-child(1) > .img {
+      background-image: url("../../img/shortHistory/taegukgi.jpg"); }
+    .his_area li:nth-child(2) > .img {
+      background-image: url("../../img/shortHistory/monster.jpg"); }
+    .his_area li:nth-child(3) > .img {
+      background-image: url("../../img/shortHistory/doduk.jpg"); }
+    .his_area li:nth-child(4) > .img {
+      background-image: url("../../img/shortHistory/amsal.jpg"); }
 
 #conBox02 {
   width: 100%;
   height: auto;
-  min-height: 600px;
+  min-height: 300px;
   background-color: #060c08; }
+  #conBox02 .text_area {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+    text-align: center;
+    color: #fdfdfd;
+    font-size: 1.5rem; }

@@ -51,10 +51,13 @@
   }
 }
 
+.box_padding{
+  padding: 2rem; box-sizing: border-box;
+}
 // #conBox
 #conBox{
   position: relative;
-  width: 100%; height: auto; min-height: 800px;
+  width: 100%; height: auto; min-height: 700px;
   padding-top: 150px; box-sizing: border-box;
   background-image: linear-gradient(nth($natural,3),nth($natural,1));
   &:after{
@@ -112,24 +115,49 @@
 }
 .his_area{
   width: 100%; height: 100%;
-  >ul{
-
-  }
+  >ul{width: 100%; height: auto;}
   li{
     width: 100%; height: 400px;
-    div{width: 50%; height: 100%;}
+    div{
+      width: 50%; height: 100%;
+    }
+    .img{
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+    .text{
+      color: #fdfdfd;
+      text-align: center;
+      dl{width: 100%; height: 100%; transform: translateY(30%);}
+      dt{font-size: 2rem; font-weight: bold;}
+      dd{padding: 0.5rem; box-sizing: border-box; font-size: 1.5rem;}
+    }
     &:nth-child(2n+1){
-      >.img{float:left;  background-color: #fcc;}
-      >.text{float: right; background-color: #cfc;}
+      >.img{float:left;}
+      >.text{float: right;}
     }
     &:nth-child(2n){
-      >.img{float:right; background-color: #fcc;}
-      >.text{float: left; background-color: #cfc;}
+      >.img{float:right;}
+      >.text{float: left;}
     }
+
+    &:nth-child(1) >.img{background-image: url('../../img/shortHistory/taegukgi.jpg');}
+    &:nth-child(2) >.img{background-image: url('../../img/shortHistory/monster.jpg');}
+    &:nth-child(3) >.img{background-image: url('../../img/shortHistory/doduk.jpg');}
+    &:nth-child(4) >.img{background-image: url('../../img/shortHistory/amsal.jpg');}
+
   }
 }
 
 #conBox02{
-  width: 100%; height: auto; min-height: 600px;
+  width: 100%; height: auto; min-height: 300px; 
   background-color: #060c08;
+  .text_area{
+    width: 100%; height: 100%;
+    transform: translateY(50%);
+    text-align: center;
+    color: #fdfdfd;
+    font-size: 1.5rem;
+  }
 }
