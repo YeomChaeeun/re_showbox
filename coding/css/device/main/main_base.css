@@ -319,4 +319,7 @@ h3::after, h3:after{ content :" "; display:block; width:50px; height:5px; backgr
 .about_info{
   width: 60%; height: auto; 
 }
+.about_info p{
+  padding: 1rem 0; box-sizing: border-box;
+}
 /* // #aboutBox ==================================================== */

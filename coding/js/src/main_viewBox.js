@@ -244,7 +244,7 @@
   }
   var mySlideStop = function(){
     clearInterval(SetSlideInterval);  
-  }
+  }   
 
   mySlideGo(); 
   viewBox.on({mouseenter:mySlideStop,mouseleave:mySlideGo});
