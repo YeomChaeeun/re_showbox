@@ -9,7 +9,7 @@
     height: 162.5vw;
     max-height: 600px;
   }
-  #viewBox .slide_btn{top: 100%; }
+  #viewBox .slide_btn{top: 96%; }
   .view_film_wrap{width: 800%; height: 60%; }
   
   .indicator{background-color: #fdfdfd; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
