@@ -1,5 +1,5 @@
 [
-  {"no": "1", "tag":2, "img":"movie_01.png", "Pcimg":"movie_01.jpg", "link": "movie_01_info.html", "imgNarr" : "영화 01", "title": "국제수사",  "date": "2020", "content": "lorem ..." },
+  {"no": "1", "tag":2, "img":"movie_01.png", "Pcimg":"movie_01.jpg", "link": "movie_01_info.html", "imgNarr" : "영화 01", "title": "국제수사",  "date": "2020", "content": "대한민국 촌구석 형사, 글로벌 범죄에 휘말렸다!<br/>“나 코리안 폴리스여!”<br/>동네급 형사의 국제급 수사가 시작된다!" },
   {"no": "2", "tag":1, "img":"movie_02.png", "Pcimg":"movie_02.jpg", "link": "movie_02_info.html", "imgNarr" : "영화 02", "title": "남산의 부장들", "date": "2020.01.22", "content": "lorem ..." },
   {"no": "3", "tag":0, "img":"movie_03.png", "Pcimg":"movie_03.jpg", "link": "movie_03_info.html", "imgNarr" : "영화 03", "title": "퍼펙트 맨", "date": "2019.10.02", "content": "lorem ..." },
   {"no": "4", "tag":0, "img":"movie_04.png", "Pcimg":"movie_04.jpg", "link": "movie_04_info.html", "imgNarr" : "영화 04", "title": "봉오동 전투", "date": "2019.08.07", "content": "lorem ..." },
