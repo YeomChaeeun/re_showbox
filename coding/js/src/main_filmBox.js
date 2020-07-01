@@ -110,7 +110,21 @@ var filmList;
         });     
       }
     });
-  }
+    // 자동 슬라이드 기능
+    var SetSlideInterval;
+    var mySlideGo = function(){
+      SetSlideInterval = setInterval(function(){
+        slideBtn.trigger('click');
+      }, timed*6);
+    }
+    var mySlideStop = function(){
+      clearInterval(SetSlideInterval);  
+    }
+  
+    mySlideGo(); 
+    filmBox.on({mouseenter:mySlideStop,mouseleave:mySlideGo});
+  } 
+
 
   filmLi.find('a').on('click',function(e){
     e.preventDefault();
@@ -140,20 +154,6 @@ var filmList;
   if(winW<640){
     mobFilm();
   }
-  
-  // 자동 슬라이드 기능
-  var SetSlideInterval;
-  var mySlideGo = function(){
-    SetSlideInterval = setInterval(function(){
-      slideBtn.trigger('click');
-    }, timed*6);
-  }
-  var mySlideStop = function(){
-    clearInterval(SetSlideInterval);  
-  }
-
-  mySlideGo(); 
-  filmBox.on({mouseenter:mySlideStop,mouseleave:mySlideGo});
-
+ 
   // end
 })(jQuery);

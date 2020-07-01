@@ -5,60 +5,72 @@
   width: 100%;
   height: auto;
   min-height: 1500px;
-  margin: auto; }
+  margin: auto;
+}
 
 .area_full {
   max-width: 900px;
-  margin: auto; }
-  @media screen and (min-width: 640px) and (max-width: 1023px) {
-    .area_full {
-      max-width: 580px; } }
-  @media screen and (min-width: 1024px) and (max-width: 1439px) {
-    .area_full {
-      max-width: 900px; } }
-  @media screen and (min-width: 1440px) and (max-width: 1919px) {
-    .area_full {
-      max-width: 1100px; } }
-  @media screen and (min-width: 1920px) {
-    .area_full {
-      max-width: 1300px; } }
+  margin: auto;
+}
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  .area_full {
+    max-width: 580px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .area_full {
+    max-width: 900px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .area_full {
+    max-width: 1100px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .area_full {
+    max-width: 1300px;
+  }
+}
 
 #viewBox {
   width: 100%;
-  height: 100vh; }
-  #viewBox > h2 {
-    position: absolute;
-    left: 10%;
-    top: 40%;
-    z-index: 100;
-    font-size: 5rem;
-    color: #f93;
-    text-transform: uppercase;
-    text-shadow: 0.2rem 0.2rem 0.2rem #000; }
+  height: 100vh;
+}
+#viewBox > h2 {
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  z-index: 100;
+  font-size: 5rem;
+  color: #f93;
+  text-transform: uppercase;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+}
 
 .video_bg {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100%; }
-  .video_bg > .video {
-    /* full size 만들기 */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    min-width: 100%;
-    height: auto;
-    min-height: 100%;
-    border: 0;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+  height: 100%;
+}
+.video_bg > .video {
+  /* full size 만들기 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  border: 0;
+  transform: translate(-50%, -50%);
+}
 
 .box_padding {
   padding: 2rem;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 #conBox {
   position: relative;
@@ -66,16 +78,14 @@
   height: auto;
   min-height: 700px;
   padding-top: 150px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#666), to(#060C08));
-  background-image: -webkit-linear-gradient(#666, #060C08);
-  background-image: -o-linear-gradient(#666, #060C08);
-  background-image: linear-gradient(#666, #060C08); }
-  #conBox:after {
-    content: "";
-    display: block;
-    clear: both; }
+  background-image: linear-gradient(#666, #060C08);
+}
+#conBox:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 .title_bg {
   position: absolute;
@@ -85,17 +95,19 @@
   max-width: 1700px;
   height: 90px;
   margin-left: 5%;
-  background-color: #f93; }
-  .title_bg > h2 {
-    position: absolute;
-    top: 50px;
-    font-size: 4rem;
-    color: #fdfdfd;
-    text-shadow: 0.2rem 0.2rem 0.2rem #000;
-    width: 100%;
-    height: 100%;
-    margin-left: 50%;
-    text-transform: uppercase; }
+  background-color: #f93;
+}
+.title_bg > h2 {
+  position: absolute;
+  top: 50px;
+  font-size: 4rem;
+  color: #fdfdfd;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  width: 100%;
+  height: 100%;
+  margin-left: 50%;
+  text-transform: uppercase;
+}
 
 .con_text {
   position: absolute;
@@ -103,93 +115,113 @@
   width: 70%;
   height: auto;
   padding: 60px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-  .con_text > p {
-    width: 100%;
-    height: auto;
-    color: #fdfdfd;
-    font-size: 1.5rem; }
+  box-sizing: border-box;
+}
+.con_text > p {
+  width: 100%;
+  height: auto;
+  color: #fdfdfd;
+  font-size: 1.5rem;
+}
 
 .con_img_bg {
   float: right;
   width: 45%;
-  height: 700px; }
-  .con_img_bg > .con_img {
-    width: 100%;
-    height: 100%;
-    background-image: url("../../img/showbox/bg-pattern.png");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: auto 100%; }
+  height: 700px;
+}
+.con_img_bg > .con_img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/showbox/bg-pattern.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto 100%;
+}
 
 #shortHistory {
   width: 100%;
   height: auto;
   min-height: 800px;
-  background-color: #060c08; }
+  background-color: #060c08;
+}
 
 .his_area {
   width: 100%;
-  height: 100%; }
-  .his_area > ul {
-    width: 100%;
-    height: auto; }
-  .his_area li {
-    width: 100%;
-    height: 400px; }
-    .his_area li div {
-      width: 50%;
-      height: 100%; }
-    .his_area li .img {
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      background-position: 50% 50%; }
-    .his_area li .text {
-      color: #fdfdfd;
-      text-align: center; }
-      .his_area li .text dl {
-        width: 100%;
-        height: 100%;
-        -webkit-transform: translateY(30%);
-        -ms-transform: translateY(30%);
-        transform: translateY(30%); }
-      .his_area li .text dt {
-        font-size: 2rem;
-        font-weight: bold; }
-      .his_area li .text dd {
-        padding: 0.5rem;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        font-size: 1.5rem; }
-    .his_area li:nth-child(2n+1) > .img {
-      float: left; }
-    .his_area li:nth-child(2n+1) > .text {
-      float: right; }
-    .his_area li:nth-child(2n) > .img {
-      float: right; }
-    .his_area li:nth-child(2n) > .text {
-      float: left; }
-    .his_area li:nth-child(1) > .img {
-      background-image: url("../../img/shortHistory/taegukgi.jpg"); }
-    .his_area li:nth-child(2) > .img {
-      background-image: url("../../img/shortHistory/monster.jpg"); }
-    .his_area li:nth-child(3) > .img {
-      background-image: url("../../img/shortHistory/doduk.jpg"); }
-    .his_area li:nth-child(4) > .img {
-      background-image: url("../../img/shortHistory/amsal.jpg"); }
+  height: 100%;
+}
+.his_area > ul {
+  width: 100%;
+  height: auto;
+}
+.his_area li {
+  width: 100%;
+  height: 400px;
+}
+.his_area li div {
+  width: 50%;
+  height: 100%;
+}
+.his_area li .img {
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.his_area li .text {
+  color: #fdfdfd;
+  text-align: center;
+}
+.his_area li .text dl {
+  width: 100%;
+  height: 100%;
+  transform: translateY(30%);
+}
+.his_area li .text dt {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.his_area li .text dd {
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
+.his_area li:nth-child(2n+1) > .img {
+  float: left;
+}
+.his_area li:nth-child(2n+1) > .text {
+  float: right;
+}
+.his_area li:nth-child(2n) > .img {
+  float: right;
+}
+.his_area li:nth-child(2n) > .text {
+  float: left;
+}
+.his_area li:nth-child(1) > .img {
+  background-image: url("../../img/shortHistory/taegukgi.jpg");
+}
+.his_area li:nth-child(2) > .img {
+  background-image: url("../../img/shortHistory/monster.jpg");
+}
+.his_area li:nth-child(3) > .img {
+  background-image: url("../../img/shortHistory/doduk.jpg");
+}
+.his_area li:nth-child(4) > .img {
+  background-image: url("../../img/shortHistory/amsal.jpg");
+}
 
 #conBox02 {
   width: 100%;
   height: auto;
   min-height: 300px;
-  background-color: #060c08; }
-  #conBox02 .text_area {
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    transform: translateY(50%);
-    text-align: center;
-    color: #fdfdfd;
-    font-size: 1.5rem; }
+  background-color: #060c08;
+}
+#conBox02 .text_area {
+  width: 100%;
+  height: 100%;
+  transform: translateY(50%);
+  text-align: center;
+  color: #fdfdfd;
+  font-size: 1.2rem;
+  padding: 1rem 5rem;
+  box-sizing: border-box;
+}
