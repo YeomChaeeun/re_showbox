@@ -1,10 +1,10 @@
 [
   {"no": "1", "tag":2, "img":"movie_01.png", "Pcimg":"movie_01.jpg", "link": "movie_01_info.html", "imgNarr" : "영화 01", "title": "국제수사",  "date": "2020", "content": "대한민국 촌구석 형사, 글로벌 범죄에 휘말렸다!<br/>“나 코리안 폴리스여!”<br/>동네급 형사의 국제급 수사가 시작된다!" },
   {"no": "2", "tag":1, "img":"movie_02.png", "Pcimg":"movie_02.jpg", "link": "movie_02_info.html", "imgNarr" : "영화 02", "title": "남산의 부장들", "date": "2020.01.22", "content": "\"각하, 제가 어떻게 하길 원하십니까\"<br/>대통령이 주변에는 충성 세력과 반대 세력들이 뒤섞이기 시작하는데<br/>흔들린 충성, 그날의 총선" },
-  {"no": "3", "tag":0, "img":"movie_03.png", "Pcimg":"movie_03.jpg", "link": "movie_03_info.html", "imgNarr" : "영화 03", "title": "퍼펙트 맨", "date": "2019.10.02", "content": "lorem ..." },
-  {"no": "4", "tag":0, "img":"movie_04.png", "Pcimg":"movie_04.jpg", "link": "movie_04_info.html", "imgNarr" : "영화 04", "title": "봉오동 전투", "date": "2019.08.07", "content": "lorem ..." },
-  {"no": "5", "tag":0, "img":"movie_05.png", "Pcimg":"movie_05.jpg", "link": "movie_05_info.html", "imgNarr" : "영화 05", "title": "마담 싸이코", "date": "2019.06", "content": "lorem ..." },
-  {"no": "6", "tag":0, "img":"movie_06.png", "Pcimg":"movie_06.jpg", "link": "movie_06_info.html", "imgNarr" : "영화 06", "title": "미성년",  "date": "2019.04.11", "content": "lorem ..." },
-  {"no": "7", "tag":0, "img":"movie_07.png", "Pcimg":"movie_07.jpg", "link": "movie_07_info.html", "imgNarr" : "영화 07", "title": "돈",  "date": "2019.03.20", "content": "lorem ..." },
-  {"no": "8", "tag":0, "img":"movie_08.png", "Pcimg":"movie_08.jpg", "link": "movie_08_info.html", "imgNarr" : "영화 08", "title": "뺑반",  "date": "2019.01.30", "content": "lorem ..."}
+  {"no": "3", "tag":0, "img":"movie_03.png", "Pcimg":"movie_03.jpg", "link": "movie_03_info.html", "imgNarr" : "영화 03", "title": "퍼펙트 맨", "date": "2019.10.02", "content": "\"이렇게 살다 죽으면 12억, 사고로 죽으면 27억!<br/>내 일 도와주면 사망보험금 니 앞으로 해줄게\"<br/> 돈 쫌 많은 로펌 대표와 폼 쫌 잡는 꼴통 건달<br/>퍼펙트하게 다른 두 남자의 인생 최대 반전이 시작된다" },
+  {"no": "4", "tag":0, "img":"movie_04.png", "Pcimg":"movie_04.jpg", "link": "movie_04_info.html", "imgNarr" : "영화 04", "title": "봉오동 전투", "date": "2019.08.07", "content": "임무는 단 하나! 달리고 달려, 일본군을 죽음의 골짜기로 유인하라!<br/>1920년 6월, 역사에 기록된 독립군의 첫 승리<br/>봉오동 죽음의 골짜기에 묻혔던 이야기가 지금부터 시작된다." },
+  {"no": "5", "tag":0, "img":"movie_05.png", "Pcimg":"movie_05.jpg", "link": "movie_05_info.html", "imgNarr" : "영화 05", "title": "마담 싸이코", "date": "2019.06", "content": "함부로 친절하지 말 것!<br/>소름돋는 역대급 싸이코가 온다" },
+  {"no": "6", "tag":0, "img":"movie_06.png", "Pcimg":"movie_06.jpg", "link": "movie_06_info.html", "imgNarr" : "영화 06", "title": "미성년",  "date": "2019.04.11", "content": "\"알아?\"<br/>\"어떻게 모르냐. 배가 불러오는데...\"<br/>폭풍 같은 사건을 마주한 두 가족의 이야기가 시작된다." },
+  {"no": "7", "tag":0, "img":"movie_07.png", "Pcimg":"movie_07.jpg", "link": "movie_07_info.html", "imgNarr" : "영화 07", "title": "돈",  "date": "2019.03.20", "content": "\"부자가 되고 싶었다\"<br/>막대한 이익을 챙길 수 있는 거래 참여를 제안 받는다." },
+  {"no": "8", "tag":0, "img":"movie_08.png", "Pcimg":"movie_08.jpg", "link": "movie_08_info.html", "imgNarr" : "영화 08", "title": "뺑반",  "date": "2019.01.30", "content": "Hit and Run 상황 발생, 순마 출동합니다! <br/>  방법을 가리지 않고 수사망을 빠져 나가려는 <br/> 통제불능 스피드광 재철의 반격 역시 점점 과감해지는데…!"}
 ]

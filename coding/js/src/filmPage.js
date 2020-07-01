@@ -35,7 +35,7 @@
   h3P.text(filmList[filmListNo].title);
   infoTextTitle.text(filmList[filmListNo].title);
   infoTextDate.text(filmList[filmListNo].date);
-  infoTextContent.text(filmList[filmListNo].content);
+  infoTextContent.html(filmList[filmListNo].content);
 
   var posterImg = detailBox.find('.poster_img');
   var ImgUrl = '../img/movie_poster/';
