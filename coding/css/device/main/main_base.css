@@ -16,16 +16,16 @@
 /* slide_btn */
 .slide_btn{position: absolute; top: 50%; left: 0; right: 0; z-index: 5;
    width:96%; height:0; margin: auto; background-color: #f93; margin-top: -35px;}
-.slide_btn button{float:left; width: 50px; height: 50px; font-size: 2rem; color: #fdfdfd; text-align: center;
+.slide_btn button{float:left; width: 50px; height: 50px; font-size: 2rem; color: #fdfdfd; text-align: left;
   text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.8);}
-.slide_btn .next{float: right;}
+.slide_btn .next{float: right; text-align: right;}
 
 /* indicator */
 .indicator{
   position:absolute; left:0; bottom:0; z-index: 3;
   width: 100%; height: 60px; background-color: #060C08; overflow: hidden;
 }
-.indicator p{display: none;}
+.indicator p{display: none; text-align: center;}
 .indi_title{width: 250%; height: 100%; padding: 10px 0; box-sizing: border-box;}
 .indi_title li{float:left; width: 12.5%; height: 100%; text-align: center; color: #ddd; text-transform: uppercase; line-height: 40px; font-size: 1.2rem; border-right: 2px solid #ddd;}
 
