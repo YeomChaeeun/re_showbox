@@ -1,6 +1,17 @@
 // filmPage.js
+var filmpageList;
 
 (function($){
+
+  $.ajax({
+    url:'../data/ajaxFilmPage.json',
+    dataType:'json',
+    async:false,
+    success:function(data){
+      filmpageList=data;
+      return filmpageList;
+    }
+  });
 
   // url에서 filmIndex, filmTitle값 가져오기
   var getUrlParameter = function getUrlParameter(sParam) {
@@ -17,6 +28,8 @@
       }
     }
   };
+
+
   
 
   var filmIndex = getUrlParameter('filmIndex');
@@ -46,7 +59,7 @@
     backgroundSize:'contain'
   });
 
-  var imgList = [filmList[filmListNo].Pcimg];
+  var imgList = [filmpageList[filmListNo].thum01,filmpageList[filmListNo].thum02,filmpageList[filmListNo].thum03];
   // var imgList = [filmList[filmListNo].still01,filmList[filmListNo].still02,filmList[filmListNo].still03];
   var filmPhoto = detailBox.find('.film_photo');
   var filmPhotoUl = filmPhoto.find('ul');
@@ -54,11 +67,12 @@
 
   // filmPhotoUl.css({width:'100%'});
   // filmPhotoLi.css({width:100/imgLen+'%'});
-
   var imgLen = imgList.length;
+  var thumUrl = '../img/filmpage/'+(filmListNo+1)+'/';
+
   for(var i=0; i<imgLen;i++){
     filmPhotoLi.eq(i).css({
-      backgroundImage:'url('+ImgUrl+imgList[i]+')',
+      backgroundImage:'url('+thumUrl+imgList[i]+')',
       backgroundSize:'100%',
       backgroundRepeat:'no-repeat',
       backgroundPosition:'50% 50%'
@@ -66,20 +80,37 @@
   }
 
 
-
+  var videoUrl = '../media/video/';
   var filmVideo = detailBox.find('.film_video');
   var videoText = 
   '<video controls loop muted>\
     <!--<source  src="../media/video/video_01.webm" type="video/webm"/>-->\
-    <source  src=" " type="video/mp4" />\
+    <source  src="'+videoUrl+filmpageList[filmListNo].video+'" type="video/mp4" />\
     <p>사용하고 계신 브라우저는 멀티미디어 호환이 되지 않으니 <a href="http://google.com/chrome">최신브라우저</a>를 설치하여 사용하세요.</p>      \
   </video>';
 
   filmVideo.append(videoText);
 
+	var win          = $(window);
+	var winH         = win.innerHeight();
+	var winHPart     = winH / 4 * 3;
+	
+  win.scrollTop(0);
 
-  
+  var viewBox = $('#viewBox');
+  var viewImg = viewBox.find('.title_img').children('.img');
+  viewImg.css({
+    backgroundImage:'url('+ thumUrl + filmpageList[filmListNo].thum01 +')',
+    backgroundPosition:'50% 50%',
+    backgroundRepeat:'no-repeat',
+    backgroundSize:'cover'
+  })
 
 
+  $(document).on('scroll', function(){
+    var doScroll = $(document).scrollTop();
+    viewImg.css({'marginTop':doScroll*1.0+'px'});
+
+  });
 
 })(jQuery);

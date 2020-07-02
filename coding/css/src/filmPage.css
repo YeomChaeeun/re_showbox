@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* filmPage.css */
 /* color.css */
 #wrap {
@@ -5,23 +6,38 @@
   height: auto;
 }
 
-#titleBox {
+#viewBox {
   width: 100%;
-  height: 400px;
-  background-color: #ddd;
+  height: 100vh;
 }
-#titleBox > h2 {
-  width: 100%;
-  height: 50px;
-  padding-top: 150px;
-  box-sizing: border-box;
-  font-size: 50px;
-  text-align: center;
+#viewBox > h2 {
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  z-index: 100;
+  font-size: 5rem;
+  color: #f93;
   text-transform: uppercase;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
 }
-#titleBox > .title_img {
+
+.title_img {
+  overflow: hidden;
+  position: relative;
   width: 100%;
   height: 100%;
+}
+.title_img > .img {
+  /* full size 만들기 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: 100%;
+  border: 0;
+  transform: translate(-50%, -50%);
 }
 
 #detailBox {
@@ -156,9 +172,6 @@
   width: 32%;
   height: 100%;
   margin-right: 2%;
-  border: 1px solid #333;
-  box-sizing: border-box;
-  background-color: #ddd;
 }
 .film_cont > .film_photo li:last-child {
   margin-right: 0;
